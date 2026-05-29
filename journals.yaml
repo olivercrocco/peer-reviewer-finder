@@ -1,0 +1,1116 @@
+# Journal registry for peer-reviewer-finder
+# Auto-built by `python -m reviewer_id.build_registry` and re-verified against
+# the OpenAlex /sources API. Edit freely; add a journal by resolving its id at
+# https://api.openalex.org/sources/issn:XXXX-XXXX and appending an entry below.
+# Fields: openalex_id, name, issn, disciplines[], tier (flagship|core|adjacent),
+#         works_count, country, relevance.
+
+journals:
+- openalex_id: S71326023
+  name: The Journal of Higher Education
+  issn:
+  - 0022-1546
+  - 1538-4640
+  disciplines:
+  - Higher Education
+  tier: flagship
+  works_count: 19262
+  country: GB
+  relevance: Premier US HE journal; strong pool for faculty development, organizational
+    behavior in HE, and student/employee development scholarship.
+- openalex_id: S166002381
+  name: Journal of Applied Psychology
+  issn:
+  - 0021-9010
+  - 1939-1854
+  disciplines:
+  - Management & Organizational Behavior
+  tier: flagship
+  works_count: 13607
+  country: US
+  relevance: Flagship for training, employee development, selection, and motivation;
+    deep bench of reviewers on workplace learning and talent.
+- openalex_id: S168329810
+  name: Comparative Education Review
+  issn:
+  - 0010-4086
+  - 1545-701X
+  disciplines:
+  - International & Comparative Education
+  tier: flagship
+  works_count: 7651
+  country: US
+  relevance: Field-defining CIE journal; reviewers cover education-and-development,
+    workforce/education policy, and equity comparatively across nations relevant to
+    HRD's national-systems work.
+- openalex_id: S117778295
+  name: Academy of Management Journal
+  issn:
+  - 0001-4273
+  - 1948-0989
+  disciplines:
+  - Management & Organizational Behavior
+  tier: flagship
+  works_count: 6911
+  country: US
+  relevance: Premier empirical management journal; reviewers cover HRM, careers, leadership,
+    and organizational change at the field-defining level.
+- openalex_id: S46763546
+  name: Academy of Management Review
+  issn:
+  - 0363-7425
+  - 1930-3807
+  disciplines:
+  - Management & Organizational Behavior
+  tier: flagship
+  works_count: 5684
+  country: US
+  relevance: Top theory journal in management; reviewers handle conceptual work on
+    learning, development, and organizational change relevant to HRD.
+- openalex_id: S94908168
+  name: Higher Education
+  issn:
+  - 0018-1560
+  - 1573-174X
+  disciplines:
+  - Higher Education
+  - International & Comparative Education
+  tier: flagship
+  works_count: 4969
+  country: NL
+  relevance: Leading international HE journal; reviewers cover academic careers, organizational
+    change in universities, and education-workforce policy adjacent to HRD.; Leading
+    international higher-education journal; reviewers handle graduate skills, ac
+- openalex_id: S20152851
+  name: International Journal of Educational Development
+  issn:
+  - 0738-0593
+  - 1873-4871
+  disciplines:
+  - International & Comparative Education
+  tier: flagship
+  works_count: 4020
+  country: NL
+  relevance: Premier education-and-development journal; strong on skills, TVET, workforce
+    development and education policy in the Global South, directly overlapping HRD-at-scale.
+- openalex_id: S134094273
+  name: Human Resource Management
+  issn:
+  - 0090-4848
+  - 1099-050X
+  disciplines:
+  - Management & Organizational Behavior
+  tier: flagship
+  works_count: 3704
+  country: US
+  relevance: Top HRM journal (Wiley); core reviewer pool for training, talent management,
+    and HR development.
+- openalex_id: S162196882
+  name: Studies in Higher Education
+  issn:
+  - 0307-5079
+  - 1470-174X
+  disciplines:
+  - Higher Education
+  - International & Comparative Education
+  tier: flagship
+  works_count: 3659
+  country: GB
+  relevance: Field-defining HE journal; routinely publishes on academic/faculty development,
+    careers, student learning, and HE workforce/policy that overlaps HRD.; Top higher-education
+    journal covering employability, graduate careers, academic developme
+- openalex_id: S160573970
+  name: Journal of Organizational Behavior
+  issn:
+  - 0894-3796
+  - 1099-1379
+  disciplines:
+  - Management & Organizational Behavior
+  tier: flagship
+  works_count: 3408
+  country: GB
+  relevance: Leading OB journal; reviewers expert in employee development, careers,
+    engagement, and learning at work.
+- openalex_id: S122767448
+  name: Journal of Management
+  issn:
+  - 0149-2063
+  - 1557-1211
+  disciplines:
+  - Management & Organizational Behavior
+  tier: flagship
+  works_count: 3375
+  country: US
+  relevance: Broad top-tier management journal with strong HRM, leadership, and careers
+    coverage for finding HRD-adjacent reviewers.
+- openalex_id: S205875998
+  name: Adult Education Quarterly
+  issn:
+  - 0741-7136
+  - 1552-3047
+  disciplines:
+  - Adult & Continuing Education
+  - Career, Vocational & Workforce Development
+  - Higher Education
+  - Human Resource Development
+  - International & Comparative Education
+  tier: flagship
+  works_count: 2800
+  country: GB
+  relevance: Field-defining North American adult-education research journal; reviewers
+    cover andragogy, transformative and workplace learning central to HRD.; Flagship
+    adult education; reviewers cover adult/transformative learning central to HRD.;
+    Flags
+- openalex_id: S4210176587
+  name: Higher Education Research & Development
+  issn:
+  - 0729-4360
+  - 1469-8366
+  disciplines:
+  - Higher Education
+  tier: flagship
+  works_count: 2633
+  country: GB
+  relevance: Flagship Australasian HE journal; deep coverage of academic development,
+    teaching/learning, and professional learning that maps onto HRD.
+- openalex_id: S130619902
+  name: Research in Higher Education
+  issn:
+  - 0361-0365
+  - 1573-188X
+  disciplines:
+  - Higher Education
+  tier: flagship
+  works_count: 2440
+  country: NL
+  relevance: Top quantitative HE journal; reviewers expert in survey/panel methods
+    on student success, persistence, and workforce outcomes useful for HRD-adjacent
+    empirics.
+- openalex_id: S129145296
+  name: Compare A Journal of Comparative and International Education
+  issn:
+  - 0305-7925
+  - 1469-3623
+  disciplines:
+  - Higher Education
+  - International & Comparative Education
+  tier: flagship
+  works_count: 2338
+  country: GB
+  relevance: BAICE flagship in comparative/international education; reviewers cover
+    education policy, internationalization, and development with capability-building
+    angles.; Comparative/international education journal; reviewers handle cross-national
+    ed
+- openalex_id: S56255037
+  name: International Journal of Lifelong Education
+  issn:
+  - 0260-1370
+  - 1464-519X
+  disciplines:
+  - Adult & Continuing Education
+  - Career, Vocational & Workforce Development
+  - Higher Education
+  - International & Comparative Education
+  tier: flagship
+  works_count: 2231
+  country: GB
+  relevance: Flagship lifelong/adult education journal; reviewers cover adult learning,
+    continuing education and workforce upskilling adjacent to HRD.; Leading international
+    lifelong-learning journal; strong on continuing education, policy, and adult le
+- openalex_id: S109675028
+  name: Comparative Education
+  issn:
+  - 0305-0068
+  - 1360-0486
+  disciplines:
+  - International & Comparative Education
+  tier: flagship
+  works_count: 2169
+  country: GB
+  relevance: Leading UK comparative-education flagship; reviewers handle cross-national
+    education systems, policy transfer, and skills/development themes adjacent to
+    national HRD.
+- openalex_id: S191693275
+  name: Human Resource Development Quarterly
+  issn:
+  - 1044-8004
+  - 1532-1096
+  disciplines:
+  - Career, Vocational & Workforce Development
+  - Human Resource Development
+  - Management & Organizational Behavior
+  tier: flagship
+  works_count: 1542
+  country: US
+  relevance: AHRD's premier empirical journal; reviewers here are the core HRD theory-and-research
+    community.; Field-defining HRD journal; reviewers cover training, workplace learning,
+    careers, talent.; Field-defining empirical HRD journal (AHRD); the c
+- openalex_id: S140059072
+  name: Human Resource Development International
+  issn:
+  - 1367-8868
+  - 1469-8374
+  disciplines:
+  - Career, Vocational & Workforce Development
+  - Human Resource Development
+  - Management & Organizational Behavior
+  tier: flagship
+  works_count: 1306
+  country: GB
+  relevance: AHRD international journal; reviewers cover national/regional HRD, cross-cultural
+    development, and policy.; Internationally oriented HRD flagship; reviewers handle
+    cross-national HRD, NHRD, policy.; UFHRD flagship with global/comparative HR
+- openalex_id: S161695446
+  name: Journal of Workplace Learning
+  issn:
+  - 1366-5626
+  - 1758-7859
+  disciplines:
+  - Adult & Continuing Education
+  - Career, Vocational & Workforce Development
+  - Higher Education
+  - Human Resource Development
+  - Management & Organizational Behavior
+  tier: flagship
+  works_count: 1248
+  country: GB
+  relevance: Core outlet for adult/workplace learning; reviewers expert in informal
+    learning and continuing development.; Core workplace/adult learning outlet directly
+    overlapping HRD learning themes.; Dedicated to learning in organizations and at
+    work;
+- openalex_id: S147712636
+  name: Studies in Continuing Education
+  issn:
+  - 0158-037X
+  - 1470-126X
+  disciplines:
+  - Adult & Continuing Education
+  - Career, Vocational & Workforce Development
+  - Higher Education
+  - Human Resource Development
+  - International & Comparative Education
+  - Management & Organizational Behavior
+  tier: flagship
+  works_count: 980
+  country: GB
+  relevance: Adult and continuing professional education; reviewers overlap with HRD
+    workplace-learning research.; Adult/continuing education journal (Australian-based);
+    reviewers cover lifelong and workplace learning relevant to HRD.; Australasian
+    jour
+- openalex_id: S49321836
+  name: Advances in Developing Human Resources
+  issn:
+  - 1523-4223
+  - 1552-3055
+  disciplines:
+  - Career, Vocational & Workforce Development
+  - Human Resource Development
+  - Management & Organizational Behavior
+  tier: flagship
+  works_count: 940
+  country: US
+  relevance: AHRD thematic journal; reviewers span the full HRD agenda including leadership
+    development and workforce issues.; AHRD thematic-issue journal spanning the full
+    HRD agenda; broad pool of HRD-identified reviewers.; Thematic HRD journal; revie
+- openalex_id: S114439130
+  name: International Journal of Training and Development
+  issn:
+  - 1360-3736
+  - 1468-2419
+  disciplines:
+  - Adult & Continuing Education
+  - Career, Vocational & Workforce Development
+  - Human Resource Development
+  - International & Comparative Education
+  - Management & Organizational Behavior
+  tier: flagship
+  works_count: 917
+  country: GB
+  relevance: Central training-and-development journal; reviewers expert in workplace
+    training and skills.; Comparative training and development research bridging adult
+    education and HRD; reviewers expert in workplace T&D and skills.; Core HRD/training
+    j
+- openalex_id: S37660120
+  name: Human Resource Development Review
+  issn:
+  - 1534-4843
+  - 1552-6712
+  disciplines:
+  - Career, Vocational & Workforce Development
+  - Human Resource Development
+  - Management & Organizational Behavior
+  tier: flagship
+  works_count: 609
+  country: US
+  relevance: 'AHRD theory journal; reviewers specialize in HRD frameworks, learning
+    theory, and conceptual development scholarship.; AHRD''s theory-building journal;
+    reviewers specialize in HRD conceptual and integrative-review work.; Theory-building
+    HRD '
+- openalex_id: S2764459744
+  name: Education + Training
+  issn:
+  - 0040-0912
+  - 1758-6127
+  disciplines:
+  - Career, Vocational & Workforce Development
+  tier: core
+  works_count: 5282
+  country: GB
+  relevance: Skills, employability, training and enterprise; broad workforce-development
+    reviewer pool.
+- openalex_id: S184846731
+  name: The International Journal of Human Resource Management
+  issn:
+  - 0958-5192
+  - 1466-4399
+  disciplines:
+  - Human Resource Development
+  - Management & Organizational Behavior
+  tier: core
+  works_count: 4262
+  country: GB
+  relevance: Flagship for international/comparative HRM; strong fit for cross-national
+    HRD, talent mobility, and workforce policy reviewers.; Largest comparative/international
+    HRM journal; deep pool for cross-national HRD reviewers.
+- openalex_id: S25746158
+  name: Journal of Vocational Behavior
+  issn:
+  - 0001-8791
+  - 1095-9084
+  disciplines:
+  - Career, Vocational & Workforce Development
+  - Management & Organizational Behavior
+  tier: core
+  works_count: 4034
+  country: US
+  relevance: Flagship careers/vocational psychology; reviewers expert in career development
+    and talent.; Premier careers/vocational journal; strong reviewer pool on career
+    development, work transitions, and skills.
+- openalex_id: S64594800
+  name: International Review of Education
+  issn:
+  - 0020-8566
+  - 1573-0638
+  disciplines:
+  - Adult & Continuing Education
+  - International & Comparative Education
+  tier: core
+  works_count: 3971
+  country: NL
+  relevance: UNESCO Institute for Lifelong Learning journal; comparative lifelong-learning
+    and education-policy reviewers with global reach.; UNESCO Institute for Lifelong
+    Learning journal; reviewers span lifelong/adult learning and comparative educatio
+- openalex_id: S29659387
+  name: Industrial and Commercial Training
+  issn:
+  - 0019-7858
+  - 1758-5767
+  disciplines:
+  - Human Resource Development
+  tier: core
+  works_count: 3858
+  country: GB
+  relevance: Applied corporate training and L&D outlet; practitioner-facing HRD reviewer
+    base.
+- openalex_id: S184445340
+  name: Higher Education Quarterly
+  issn:
+  - 0951-5224
+  - 1468-2273
+  disciplines:
+  - Higher Education
+  tier: core
+  works_count: 3622
+  country: GB
+  relevance: Established UK HE journal spanning governance, careers, and organizational
+    change in universities relevant to HRD.
+- openalex_id: S4210201494
+  name: Prospects
+  issn:
+  - 0033-1538
+  - 1573-9090
+  disciplines:
+  - International & Comparative Education
+  tier: core
+  works_count: 2725
+  country: null
+  relevance: UNESCO-IBE comparative education and curriculum/policy journal; reviewers
+    cover education systems and workforce-relevant policy across regions.
+- openalex_id: S10595604
+  name: Journal of college student development
+  issn:
+  - 0897-5264
+  - 1543-3382
+  disciplines:
+  - Higher Education
+  tier: core
+  works_count: 2539
+  country: US
+  relevance: Leading student-development journal; reviewers expert in developmental
+    theory and learning outcomes applicable to employee/learner development.
+- openalex_id: S204305389
+  name: Journal of Management Development
+  issn:
+  - 0262-1711
+  - 1758-7492
+  disciplines:
+  - Career, Vocational & Workforce Development
+  - Human Resource Development
+  tier: core
+  works_count: 2492
+  country: GB
+  relevance: Management and leadership development; directly adjacent to HRD leader-development
+    streams.; Management/leadership development; reviewers overlap HRD leadership-development
+    work.
+- openalex_id: S206927904
+  name: Asia Pacific Journal of Human Resources
+  issn:
+  - 1038-4111
+  - 1744-7941
+  disciplines:
+  - Career, Vocational & Workforce Development
+  - Human Resource Development
+  - Management & Organizational Behavior
+  tier: core
+  works_count: 2459
+  country: GB
+  relevance: Leading Asia-Pacific HRM/HRD outlet; reviewers cover regional development
+    and workforce themes.; Leading Australasian/Asian HRM journal; reviewers ideal
+    for regional HRD, talent, and workforce-development work.; Regional (Asia-Pacific)
+    HRM/
+- openalex_id: S142259175
+  name: Assessment & Evaluation in Higher Education
+  issn:
+  - 0260-2938
+  - 1469-297X
+  disciplines:
+  - Higher Education
+  tier: core
+  works_count: 2457
+  country: GB
+  relevance: Core methods journal on evaluation of learning and programs, transferable
+    to training evaluation and competency assessment in HRD.
+- openalex_id: S82530051
+  name: Journal of Career Development
+  issn:
+  - 0894-8453
+  - 1556-0856
+  - 1573-3548
+  disciplines:
+  - Adult & Continuing Education
+  - Career, Vocational & Workforce Development
+  tier: core
+  works_count: 2260
+  country: US
+  relevance: Career theory, development, and intervention; reviewers relevant to HRD
+    career-development and talent themes.; Core career development journal; reviewers
+    cover career interventions and workforce entry.
+- openalex_id: S186832212
+  name: "Review of higher education/\x98The \x9Creview of higher education"
+  issn:
+  - 0162-5748
+  - 1090-7009
+  disciplines:
+  - Higher Education
+  tier: core
+  works_count: 2212
+  country: US
+  relevance: ASHE-affiliated journal strong on equity, organizational, and policy
+    scholarship; reviewers handle diversity/equity in HE organizations.
+- openalex_id: S162482565
+  name: New Directions for Adult and Continuing Education
+  issn:
+  - 1052-2891
+  - 1536-0717
+  disciplines:
+  - Adult & Continuing Education
+  tier: core
+  works_count: 2198
+  country: US
+  relevance: Long-running thematic series on adult/continuing education topics including
+    workforce and program development feeding HRD reviewers.
+- openalex_id: S47924309
+  name: Journal of Education Policy
+  issn:
+  - 0268-0939
+  - 1464-5106
+  disciplines:
+  - International & Comparative Education
+  tier: core
+  works_count: 2140
+  country: GB
+  relevance: Leading education-policy journal; reviewers analyze workforce/skills
+    policy, governance and equity, overlapping HRD's education-and-workforce-policy
+    themes.
+- openalex_id: S135873401
+  name: Teaching in Higher Education
+  issn:
+  - 1356-2517
+  - 1470-1294
+  disciplines:
+  - Higher Education
+  tier: core
+  works_count: 2135
+  country: GB
+  relevance: Central outlet for academic practice and faculty/educator development,
+    directly adjacent to learning-and-development themes in HRD.
+- openalex_id: S152304618
+  name: The Leadership Quarterly
+  issn:
+  - 1048-9843
+  - 1873-3409
+  disciplines:
+  - Management & Organizational Behavior
+  tier: core
+  works_count: 2073
+  country: NL
+  relevance: Top leadership journal; reviewers cover leadership and leader development
+    directly relevant to HRD.
+- openalex_id: S95227037
+  name: Higher Education Policy
+  issn:
+  - 0952-8733
+  - 1740-3863
+  disciplines:
+  - Higher Education
+  - International & Comparative Education
+  tier: core
+  works_count: 1869
+  country: GB
+  relevance: 'IAU journal on higher-education governance and policy; reviewers cover
+    talent, internationalization and human-capital policy adjacent to HRD.; IAU policy
+    journal; reviewers cover workforce, skills, and education-policy questions central
+    to '
+- openalex_id: S99768379
+  name: Management Learning
+  issn:
+  - 1350-5076
+  - 1461-7307
+  disciplines:
+  - Adult & Continuing Education
+  tier: core
+  works_count: 1737
+  country: GB
+  relevance: Critical journal on learning in management and organizations; reviewers
+    cover leadership/management development overlapping HRD.
+- openalex_id: S2764492969
+  name: Adult Learning
+  issn:
+  - 1045-1595
+  - 2162-4070
+  disciplines:
+  - Adult & Continuing Education
+  tier: core
+  works_count: 1675
+  country: US
+  relevance: AAACE practitioner-scholar journal on adult learning theory and practice;
+    reviewers span andragogy and workplace/professional development.
+- openalex_id: S105044966
+  name: The Career Development Quarterly
+  issn:
+  - 0889-4019
+  - 2161-0045
+  disciplines:
+  - Career, Vocational & Workforce Development
+  - Human Resource Development
+  tier: core
+  works_count: 1635
+  country: US
+  relevance: Career counseling and development; reviewers for career theory and guidance
+    practice.; Career development and counseling; reviewers qualified for HRD career
+    and adult-transition work.
+- openalex_id: S53132383
+  name: Innovative Higher Education
+  issn:
+  - 0742-5627
+  - 1573-1758
+  disciplines:
+  - Higher Education
+  tier: core
+  works_count: 1575
+  country: NL
+  relevance: Covers innovation in teaching, faculty roles, and institutional change;
+    reviewers handle organizational learning and development in HE.
+- openalex_id: S45682993
+  name: Academy of Management Learning and Education
+  issn:
+  - 1537-260X
+  - 1944-9585
+  disciplines:
+  - Management & Organizational Behavior
+  tier: core
+  works_count: 1548
+  country: US
+  relevance: Leading journal on management learning and education; reviewers cover
+    development pedagogy and capability building.
+- openalex_id: S113497174
+  name: Human Resource Management Journal
+  issn:
+  - 0954-5395
+  - 1748-8583
+  disciplines:
+  - Human Resource Development
+  - Management & Organizational Behavior
+  tier: core
+  works_count: 1421
+  country: GB
+  relevance: Leading European HRM journal; reviewers cover learning, skills, careers,
+    and employment relations central to HRD.; Leading HRM journal; reviewers cover
+    talent, development, and people-management adjacent to HRD.
+- openalex_id: S182336501
+  name: Career Development International
+  issn:
+  - 1362-0436
+  - 1758-6003
+  disciplines:
+  - Adult & Continuing Education
+  - Career, Vocational & Workforce Development
+  - Human Resource Development
+  - Management & Organizational Behavior
+  tier: core
+  works_count: 1399
+  country: GB
+  relevance: Careers in organizational context; reviewers overlap HRD career and talent
+    management.; Careers, talent, and employee development; reviewers overlap heavily
+    with HRD career scholarship.; Careers, talent, and employee-development research;
+    r
+- openalex_id: S4210171403
+  name: Journal of Vocational Education and Training
+  issn:
+  - 1363-6820
+  - 1747-5090
+  disciplines:
+  - Adult & Continuing Education
+  - Career, Vocational & Workforce Development
+  - Human Resource Development
+  - International & Comparative Education
+  tier: core
+  works_count: 1342
+  country: GB
+  relevance: Leading TVET journal; reviewers cover vocational education, skills, work
+    transitions.; Leading VET/TVET journal; reviewers cover skills formation, workplace
+    learning and qualifications frameworks central to workforce HRD.; Leading VET/skill
+- openalex_id: S104568202
+  name: Journal of Higher Education Policy and Management
+  issn:
+  - 1360-080X
+  - 1469-9508
+  disciplines:
+  - Higher Education
+  tier: core
+  works_count: 1278
+  country: GB
+  relevance: Management-focused HE journal; reviewers expert in leadership, organizational
+    change, and staff development in HE institutions.
+- openalex_id: S187925018
+  name: Globalisation Societies and Education
+  issn:
+  - 1476-7724
+  - 1476-7732
+  disciplines:
+  - International & Comparative Education
+  tier: core
+  works_count: 1242
+  country: GB
+  relevance: Globalization-of-education journal; reviewers address skills regimes,
+    workforce/education policy, and equity under globalization relevant to national
+    HRD.
+- openalex_id: S102624508
+  name: The Learning Organization
+  issn:
+  - 0969-6474
+  - 1758-7905
+  disciplines:
+  - Adult & Continuing Education
+  - Human Resource Development
+  - Management & Organizational Behavior
+  tier: core
+  works_count: 1192
+  country: GB
+  relevance: Focused on organizational learning and knowledge; reviewers cover learning
+    culture and capability building.; Organizational learning and knowledge journal;
+    directly adjacent to HRD's organizational change and learning-culture work.; Organiz
+- openalex_id: S50258942
+  name: Journal of Studies in International Education
+  issn:
+  - 1028-3153
+  - 1552-7808
+  disciplines:
+  - Higher Education
+  - International & Comparative Education
+  tier: core
+  works_count: 1068
+  country: US
+  relevance: Central outlet for internationalization and international students/study
+    abroad; reviewers cover global mobility and cross-cultural learning adjacent to
+    HRD.; Premier internationalization journal; reviewers cover global mobility, cross-cult
+- openalex_id: S16240985
+  name: The International Journal for Academic Development
+  issn:
+  - 1360-144X
+  - 1470-1324
+  disciplines:
+  - Higher Education
+  tier: core
+  works_count: 1032
+  country: GB
+  relevance: The journal of faculty/educational developers; most direct HE analogue
+    to HRD's professional-development and capability-building focus.
+- openalex_id: S32136629
+  name: Journal of Education and Work
+  issn:
+  - 1363-9080
+  - 1469-9435
+  disciplines:
+  - Adult & Continuing Education
+  - Career, Vocational & Workforce Development
+  - Higher Education
+  - Human Resource Development
+  - International & Comparative Education
+  tier: core
+  works_count: 979
+  country: GB
+  relevance: Education-to-work and skills journal; reviewers expert in school/HE-to-work
+    transitions, skills policy, and workforce development overlapping HRD.; Education-to-work
+    transitions, skills and labor markets; reviewers bridge education policy a
+- openalex_id: S60010591
+  name: Action Learning Research and Practice
+  issn:
+  - 1476-7333
+  - 1476-7341
+  disciplines:
+  - Adult & Continuing Education
+  - Human Resource Development
+  tier: core
+  works_count: 888
+  country: GB
+  relevance: Action learning in organizational and professional development; reviewers
+    cover experiential adult learning and leadership development.; Action learning
+    is a core HRD intervention method; reviewers know experiential and OD practice.
+- openalex_id: S2764428444
+  name: Higher Education Skills and Work-based Learning
+  issn:
+  - 2042-3896
+  - 2042-390X
+  disciplines:
+  - Adult & Continuing Education
+  - Career, Vocational & Workforce Development
+  tier: core
+  works_count: 867
+  country: GB
+  relevance: Work-based and work-integrated learning, employability, and skills; reviewers
+    relevant to HRD's workforce-development overlap.; Work-based learning and employability;
+    reviewers bridge skills development and HRD.
+- openalex_id: S2764552160
+  name: Studies in the Education of Adults
+  issn:
+  - 0266-0830
+  - 1478-9833
+  disciplines:
+  - Adult & Continuing Education
+  tier: core
+  works_count: 835
+  country: GB
+  relevance: UK flagship for adult-education scholarship (NIACE/LERF lineage); reviewers
+    cover community, popular, and workplace adult learning.
+- openalex_id: S4210206506
+  name: International Journal for Educational and Vocational Guidance
+  issn:
+  - 1573-1782
+  - 1873-0388
+  disciplines:
+  - Career, Vocational & Workforce Development
+  tier: core
+  works_count: 781
+  country: null
+  relevance: International career guidance and vocational counseling reviewer base.
+- openalex_id: S2764516016
+  name: European journal of training and development
+  issn:
+  - 2046-9012
+  - 2046-9020
+  disciplines:
+  - Career, Vocational & Workforce Development
+  - Human Resource Development
+  - Management & Organizational Behavior
+  tier: core
+  works_count: 758
+  country: GB
+  relevance: Central training-and-development journal (formerly J. of European Industrial
+    Training); strong HRD overlap.; Core HRD/training journal (European base); reviewers
+    cover T&D, learning, careers.; Dedicated training and development journal (Eme
+- openalex_id: S47223233
+  name: Research in Comparative and International Education
+  issn:
+  - 1745-4999
+  disciplines:
+  - International & Comparative Education
+  tier: core
+  works_count: 700
+  country: GB
+  relevance: Dedicated CIE methods-and-substance journal; reviewers cover cross-national
+    education policy and development squarely adjacent to comparative HRD.
+- openalex_id: S84210283
+  name: International Journal of Human Resources Development and Management
+  issn:
+  - 1465-6612
+  - 1741-5160
+  disciplines:
+  - Human Resource Development
+  tier: core
+  works_count: 617
+  country: GB
+  relevance: Explicitly HRD-and-management focused with international scope; squarely
+    on-topic.
+- openalex_id: S4210218730
+  name: Journal of Adult and Continuing Education
+  issn:
+  - 1477-9714
+  - 1479-7194
+  disciplines:
+  - Adult & Continuing Education
+  tier: core
+  works_count: 580
+  country: GB
+  relevance: International peer-reviewed outlet for adult and continuing education
+    research; covers lifelong learning and workforce education.
+- openalex_id: S9600176
+  name: Vocations and Learning
+  issn:
+  - 1874-785X
+  - 1874-7868
+  disciplines:
+  - Adult & Continuing Education
+  - Career, Vocational & Workforce Development
+  - Higher Education
+  - Human Resource Development
+  - International & Comparative Education
+  - Management & Organizational Behavior
+  tier: core
+  works_count: 386
+  country: NL
+  relevance: European journal on vocational learning; reviewers cover skill formation,
+    VET, and learning-for-work bridging HRD and education policy.; Studies in vocational
+    and professional learning; reviewers cover workplace learning, competence and
+    ski
+- openalex_id: S2765072924
+  name: European Journal for Research on the Education and Learning of Adults
+  issn:
+  - 2000-7426
+  disciplines:
+  - Adult & Continuing Education
+  tier: core
+  works_count: 354
+  country: SE
+  relevance: ESREA's open-access flagship for European adult-learning research; broadens
+    reviewer pool with continental/critical perspectives.
+- openalex_id: S2736341217
+  name: International Journal for Research in Vocational Education and Training
+  issn:
+  - 2197-8638
+  - 2197-8646
+  disciplines:
+  - Career, Vocational & Workforce Development
+  tier: core
+  works_count: 223
+  country: DE
+  relevance: International TVET research outlet; reviewers in skills systems and vocational
+    pedagogy.
+- openalex_id: S143668711
+  name: Administrative Science Quarterly
+  issn:
+  - 0001-8392
+  - 1930-3815
+  disciplines:
+  - Management & Organizational Behavior
+  tier: adjacent
+  works_count: 4342
+  country: GB
+  relevance: Elite organization-theory journal; reviewers cover organizational change
+    and institutional dynamics adjacent to workforce development.
+- openalex_id: S128457257
+  name: Educational Gerontology
+  issn:
+  - 0360-1277
+  - 1521-0472
+  disciplines:
+  - Adult & Continuing Education
+  tier: adjacent
+  works_count: 3689
+  country: GB
+  relevance: Older-adult and later-life learning; reviewers relevant to HRD aging-workforce,
+    lifelong learning, and continuing education.
+- openalex_id: S71191459
+  name: European Journal of Education
+  issn:
+  - 0141-8211
+  - 1465-3435
+  disciplines:
+  - International & Comparative Education
+  tier: adjacent
+  works_count: 2957
+  country: GB
+  relevance: Policy-oriented European education journal; reviewers cover lifelong
+    learning, skills and education governance adjacent to HRD/workforce policy.
+- openalex_id: S139232146
+  name: Personnel Review
+  issn:
+  - 0048-3486
+  - 1758-6933
+  disciplines:
+  - Career, Vocational & Workforce Development
+  - Management & Organizational Behavior
+  tier: adjacent
+  works_count: 2696
+  country: GB
+  relevance: Broad HRM/employment journal; reviewers cover training, careers, and
+    HR practices adjacent to HRD.; HRM journal covering development, careers, and
+    learning; HRD-adjacent reviewers.
+- openalex_id: S4210189271
+  name: Leadership & Organization Development Journal
+  issn:
+  - 0143-7739
+  - 1472-5347
+  disciplines:
+  - Human Resource Development
+  tier: adjacent
+  works_count: 2513
+  country: GB
+  relevance: Leadership and OD; reviewers qualified for HRD leadership- and change-development
+    manuscripts.
+- openalex_id: S201037040
+  name: International Journal of Manpower
+  issn:
+  - 0143-7720
+  - 1758-6577
+  disciplines:
+  - Career, Vocational & Workforce Development
+  tier: adjacent
+  works_count: 2218
+  country: GB
+  relevance: Labor economics and workforce/skills policy; reviewers for HRD macro
+    and human capital.
+- openalex_id: S157687834
+  name: Asia Pacific Journal of Education
+  issn:
+  - 0218-8791
+  - 1742-6855
+  disciplines:
+  - International & Comparative Education
+  tier: adjacent
+  works_count: 1450
+  country: GB
+  relevance: Asia-Pacific education and policy journal; reviewers bring regional expertise
+    on education systems and skills relevant to comparative HRD.
+- openalex_id: S184932276
+  name: Asia Pacific Education Review
+  issn:
+  - 1598-1037
+  - 1876-407X
+  disciplines:
+  - Higher Education
+  - International & Comparative Education
+  tier: adjacent
+  works_count: 1356
+  country: KR
+  relevance: 'Regional Asia-Pacific education journal; reviewers cover education policy,
+    human-capital and development in contexts overlapping ASEAN HRD.; Regional Asia-Pacific
+    journal; adds geographic breadth and reviewers familiar with HE, skills, and '
+- openalex_id: S4394735601
+  name: Australian Journal of Career Development
+  issn:
+  - 2200-6974
+  disciplines:
+  - Career, Vocational & Workforce Development
+  tier: adjacent
+  works_count: 1190
+  country: null
+  relevance: Regional (Australian) careers journal; reviewers for career development
+    and guidance.
+- openalex_id: S97033246
+  name: Equality Diversity and Inclusion An International Journal
+  issn:
+  - 2040-7149
+  - 2040-7157
+  disciplines:
+  - Human Resource Development
+  - Management & Organizational Behavior
+  tier: adjacent
+  works_count: 1143
+  country: GB
+  relevance: Core diversity/equity-in-organizations journal; reviewers fit DEI dimensions
+    of HRD and workforce development.; Diversity, equity and inclusion in organizations;
+    matches HRD's equity-in-development themes.
+- openalex_id: S5043877
+  name: Education Economics
+  issn:
+  - 0964-5292
+  - 1469-5782
+  disciplines:
+  - International & Comparative Education
+  tier: adjacent
+  works_count: 1141
+  country: GB
+  relevance: Economics-of-education journal; reviewers analyze human-capital, returns
+    to training/education and skills supply relevant to HRD's macro agenda.
+- openalex_id: S20419620
+  name: Research in Post-Compulsory Education
+  issn:
+  - 1359-6748
+  - 1747-5112
+  disciplines:
+  - Adult & Continuing Education
+  tier: adjacent
+  works_count: 915
+  country: GB
+  relevance: Post-compulsory, further, and continuing education; reviewers cover adult
+    learners and vocational/skills provision.
+- openalex_id: S175013504
+  name: Gender in Management An International Journal
+  issn:
+  - 1754-2413
+  - 1754-2421
+  disciplines:
+  - Management & Organizational Behavior
+  tier: adjacent
+  works_count: 865
+  country: GB
+  relevance: Focused on gender and equity in organizations; reviewers cover diversity
+    in development, leadership, and careers.
+- openalex_id: S63896471
+  name: Active Learning in Higher Education
+  issn:
+  - 1469-7874
+  - 1741-2625
+  disciplines:
+  - Higher Education
+  tier: adjacent
+  works_count: 681
+  country: US
+  relevance: Specialty learning-process journal; reviewers expert in instructional
+    design and engagement transferable to training design in HRD.
+- openalex_id: S165736896
+  name: Australian Journal of Adult Learning
+  issn:
+  - 1443-1394
+  disciplines:
+  - Adult & Continuing Education
+  tier: adjacent
+  works_count: 300
+  country: null
+  relevance: Australasian adult/community learning journal adding regional breadth;
+    reviewers in adult education, ACE, and workplace learning.
+- openalex_id: S3035624105
+  name: Empirical research in vocational education and training
+  issn:
+  - 1877-6337
+  - 1877-6345
+  disciplines:
+  - Adult & Continuing Education
+  - Career, Vocational & Workforce Development
+  tier: adjacent
+  works_count: 251
+  country: NL
+  relevance: Empirical European TVET journal; reviewers for skills measurement and
+    training outcomes.; Open-access empirical VET journal (European); reviewers strong
+    on quantitative skills/training research useful for HRD methods.

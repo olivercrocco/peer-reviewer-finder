@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.DS_Store
+
+# Generated reviewer outputs
+output/
+
+# Manuscript specs are private — keep only the committed template
+articles/*
+!articles/example.template.json
+
+# Reviewer over-use ledger is private operational data — keep only the example
+reviewer-ledger.csv

@@ -1,0 +1,1680 @@
+[
+  {
+    "discipline": "Human Resource Development",
+    "journals": [
+      {
+        "name": "Human Resource Development Quarterly",
+        "tier": "flagship",
+        "openalex_id": "S191693275",
+        "issn": [
+          "1044-8004",
+          "1532-1096"
+        ],
+        "works_count": 1542,
+        "relevance": "AHRD's premier empirical journal; reviewers here are the core HRD theory-and-research community."
+      },
+      {
+        "name": "Human Resource Development Review",
+        "tier": "flagship",
+        "openalex_id": "S37660120",
+        "issn": [
+          "1534-4843",
+          "1552-6712"
+        ],
+        "works_count": 609,
+        "relevance": "AHRD's theory-building journal; reviewers specialize in HRD conceptual and integrative-review work."
+      },
+      {
+        "name": "Human Resource Development International",
+        "tier": "flagship",
+        "openalex_id": "S140059072",
+        "issn": [
+          "1367-8868",
+          "1469-8374"
+        ],
+        "works_count": 1306,
+        "relevance": "UFHRD flagship with global/comparative HRD scope; ideal for international and regional HRD manuscripts."
+      },
+      {
+        "name": "Advances in Developing Human Resources",
+        "tier": "flagship",
+        "openalex_id": "S49321836",
+        "issn": [
+          "1523-4223",
+          "1552-3055"
+        ],
+        "works_count": 940,
+        "relevance": "AHRD thematic-issue journal spanning the full HRD agenda; broad pool of HRD-identified reviewers."
+      },
+      {
+        "name": "European Journal of Training and Development",
+        "tier": "core",
+        "openalex_id": "S2764516016",
+        "issn": [
+          "2046-9012",
+          "2046-9020"
+        ],
+        "works_count": 758,
+        "relevance": "Central training-and-development journal (formerly J. of European Industrial Training); strong HRD overlap."
+      },
+      {
+        "name": "International Journal of Training and Development",
+        "tier": "core",
+        "openalex_id": "S114439130",
+        "issn": [
+          "1360-3736",
+          "1468-2419"
+        ],
+        "works_count": 917,
+        "relevance": "Dedicated to training and workforce development internationally; reviewers cover T&D evaluation and policy."
+      },
+      {
+        "name": "Journal of Workplace Learning",
+        "tier": "core",
+        "openalex_id": "S161695446",
+        "issn": [
+          "1366-5626",
+          "1758-7859"
+        ],
+        "works_count": 1248,
+        "relevance": "Focused squarely on workplace and informal learning, a central HRD theme."
+      },
+      {
+        "name": "Career Development International",
+        "tier": "core",
+        "openalex_id": "S182336501",
+        "issn": [
+          "1362-0436",
+          "1758-6003"
+        ],
+        "works_count": 1399,
+        "relevance": "Careers, talent, and employee development; reviewers overlap heavily with HRD career scholarship."
+      },
+      {
+        "name": "The Career Development Quarterly",
+        "tier": "core",
+        "openalex_id": "S105044966",
+        "issn": [
+          "0889-4019",
+          "2161-0045"
+        ],
+        "works_count": 1635,
+        "relevance": "Career development and counseling; reviewers qualified for HRD career and adult-transition work."
+      },
+      {
+        "name": "Industrial and Commercial Training",
+        "tier": "core",
+        "openalex_id": "S29659387",
+        "issn": [
+          "0019-7858",
+          "1758-5767"
+        ],
+        "works_count": 3858,
+        "relevance": "Applied corporate training and L&D outlet; practitioner-facing HRD reviewer base."
+      },
+      {
+        "name": "Journal of Management Development",
+        "tier": "core",
+        "openalex_id": "S204305389",
+        "issn": [
+          "0262-1711",
+          "1758-7492"
+        ],
+        "works_count": 2492,
+        "relevance": "Management and leadership development; directly adjacent to HRD leader-development streams."
+      },
+      {
+        "name": "Action Learning: Research and Practice",
+        "tier": "core",
+        "openalex_id": "S60010591",
+        "issn": [
+          "1476-7333",
+          "1476-7341"
+        ],
+        "works_count": 888,
+        "relevance": "Action learning is a core HRD intervention method; reviewers know experiential and OD practice."
+      },
+      {
+        "name": "The Learning Organization",
+        "tier": "core",
+        "openalex_id": "S102624508",
+        "issn": [
+          "0969-6474",
+          "1758-7905"
+        ],
+        "works_count": 1192,
+        "relevance": "Organizational learning and knowledge; central to HRD's organization-development tradition."
+      },
+      {
+        "name": "International Journal of Human Resources Development and Management",
+        "tier": "core",
+        "openalex_id": "S84210283",
+        "issn": [
+          "1465-6612",
+          "1741-5160"
+        ],
+        "works_count": 617,
+        "relevance": "Explicitly HRD-and-management focused with international scope; squarely on-topic."
+      },
+      {
+        "name": "Asia Pacific Journal of Human Resources",
+        "tier": "core",
+        "openalex_id": "S206927904",
+        "issn": [
+          "1038-4111",
+          "1744-7941"
+        ],
+        "works_count": 2459,
+        "relevance": "Leading Asia-Pacific HRM/HRD outlet; reviewers cover regional development and workforce themes."
+      },
+      {
+        "name": "Studies in Continuing Education",
+        "tier": "adjacent",
+        "openalex_id": "S147712636",
+        "issn": [
+          "0158-037X",
+          "1470-126X"
+        ],
+        "works_count": 980,
+        "relevance": "Adult and continuing professional education; reviewers overlap with HRD workplace-learning research."
+      },
+      {
+        "name": "Adult Education Quarterly",
+        "tier": "adjacent",
+        "openalex_id": "S205875998",
+        "issn": [
+          "0741-7136",
+          "1552-3047"
+        ],
+        "works_count": 2800,
+        "relevance": "Flagship adult-learning journal; transformative-learning and andragogy reviewers relevant to HRD."
+      },
+      {
+        "name": "Journal of Vocational Education and Training",
+        "tier": "adjacent",
+        "openalex_id": "S4210171403",
+        "issn": [
+          "1363-6820",
+          "1747-5090"
+        ],
+        "works_count": 1342,
+        "relevance": "TVET and skills formation; directly relevant to HRD workforce and education-policy manuscripts."
+      },
+      {
+        "name": "Vocations and Learning",
+        "tier": "adjacent",
+        "openalex_id": "S9600176",
+        "issn": [
+          "1874-785X",
+          "1874-7868"
+        ],
+        "works_count": 386,
+        "relevance": "Workplace and vocational learning, professional development; strong HRD methodological overlap."
+      },
+      {
+        "name": "Journal of Education and Work",
+        "tier": "adjacent",
+        "openalex_id": "S32136629",
+        "issn": [
+          "1363-9080",
+          "1469-9435"
+        ],
+        "works_count": 979,
+        "relevance": "School-to-work, skills, and labor-market transitions; reviewers fit HRD workforce-policy work."
+      },
+      {
+        "name": "Human Resource Management Journal",
+        "tier": "adjacent",
+        "openalex_id": "S113497174",
+        "issn": [
+          "0954-5395",
+          "1748-8583"
+        ],
+        "works_count": 1421,
+        "relevance": "Leading HRM journal; reviewers cover talent, development, and people-management adjacent to HRD."
+      },
+      {
+        "name": "The International Journal of Human Resource Management",
+        "tier": "adjacent",
+        "openalex_id": "S184846731",
+        "issn": [
+          "0958-5192",
+          "1466-4399"
+        ],
+        "works_count": 4262,
+        "relevance": "Largest comparative/international HRM journal; deep pool for cross-national HRD reviewers."
+      },
+      {
+        "name": "Leadership & Organization Development Journal",
+        "tier": "adjacent",
+        "openalex_id": "S4210189271",
+        "issn": [
+          "0143-7739",
+          "1472-5347"
+        ],
+        "works_count": 2513,
+        "relevance": "Leadership and OD; reviewers qualified for HRD leadership- and change-development manuscripts."
+      },
+      {
+        "name": "Equality, Diversity and Inclusion: An International Journal",
+        "tier": "adjacent",
+        "openalex_id": "S97033246",
+        "issn": [
+          "2040-7149",
+          "2040-7157"
+        ],
+        "works_count": 1143,
+        "relevance": "Diversity, equity and inclusion in organizations; matches HRD's equity-in-development themes."
+      }
+    ]
+  },
+  {
+    "discipline": "Adult & Continuing Education",
+    "journals": [
+      {
+        "name": "Adult Education Quarterly",
+        "tier": "flagship",
+        "openalex_id": "S205875998",
+        "issn": [
+          "0741-7136",
+          "1552-3047"
+        ],
+        "works_count": 2800,
+        "relevance": "Field-defining North American adult-education research journal; reviewers cover andragogy, transformative and workplace learning central to HRD."
+      },
+      {
+        "name": "International Journal of Lifelong Education",
+        "tier": "flagship",
+        "openalex_id": "S56255037",
+        "issn": [
+          "0260-1370",
+          "1464-519X"
+        ],
+        "works_count": 2231,
+        "relevance": "Leading international lifelong-learning journal; strong on continuing education, policy, and adult learning across countries relevant to HRD."
+      },
+      {
+        "name": "Studies in Continuing Education",
+        "tier": "flagship",
+        "openalex_id": "S147712636",
+        "issn": [
+          "0158-037X",
+          "1470-126X"
+        ],
+        "works_count": 980,
+        "relevance": "Premier journal on workplace and professional continuing learning; reviewers expert in learning-at-work, a core HRD theme."
+      },
+      {
+        "name": "Journal of Workplace Learning",
+        "tier": "flagship",
+        "openalex_id": "S161695446",
+        "issn": [
+          "1366-5626",
+          "1758-7859"
+        ],
+        "works_count": 1248,
+        "relevance": "Dedicated to learning in organizations and at work; directly overlaps HRD's training, informal learning, and development agenda."
+      },
+      {
+        "name": "Studies in the Education of Adults",
+        "tier": "core",
+        "openalex_id": "S2764552160",
+        "issn": [
+          "0266-0830",
+          "1478-9833"
+        ],
+        "works_count": 835,
+        "relevance": "UK flagship for adult-education scholarship (NIACE/LERF lineage); reviewers cover community, popular, and workplace adult learning."
+      },
+      {
+        "name": "European Journal for Research on the Education and Learning of Adults",
+        "tier": "core",
+        "openalex_id": "S2765072924",
+        "issn": [
+          "2000-7426"
+        ],
+        "works_count": 354,
+        "relevance": "ESREA's open-access flagship for European adult-learning research; broadens reviewer pool with continental/critical perspectives."
+      },
+      {
+        "name": "Adult Learning",
+        "tier": "core",
+        "openalex_id": "S2764492969",
+        "issn": [
+          "1045-1595",
+          "2162-4070"
+        ],
+        "works_count": 1675,
+        "relevance": "AAACE practitioner-scholar journal on adult learning theory and practice; reviewers span andragogy and workplace/professional development."
+      },
+      {
+        "name": "New Directions for Adult and Continuing Education",
+        "tier": "core",
+        "openalex_id": "S162482565",
+        "issn": [
+          "1052-2891",
+          "1536-0717"
+        ],
+        "works_count": 2198,
+        "relevance": "Long-running thematic series on adult/continuing education topics including workforce and program development feeding HRD reviewers."
+      },
+      {
+        "name": "Journal of Adult and Continuing Education",
+        "tier": "core",
+        "openalex_id": "S4210218730",
+        "issn": [
+          "1477-9714",
+          "1479-7194"
+        ],
+        "works_count": 580,
+        "relevance": "International peer-reviewed outlet for adult and continuing education research; covers lifelong learning and workforce education."
+      },
+      {
+        "name": "International Journal of Training and Development",
+        "tier": "core",
+        "openalex_id": "S114439130",
+        "issn": [
+          "1360-3736",
+          "1468-2419"
+        ],
+        "works_count": 917,
+        "relevance": "Comparative training and development research bridging adult education and HRD; reviewers expert in workplace T&D and skills."
+      },
+      {
+        "name": "Journal of Vocational Education and Training",
+        "tier": "core",
+        "openalex_id": "S4210171403",
+        "issn": [
+          "1363-6820",
+          "1747-5090"
+        ],
+        "works_count": 1342,
+        "relevance": "Leading VET/skills journal; reviewers cover vocational learning, workforce policy, and TVET overlapping HRD's skills agenda."
+      },
+      {
+        "name": "Journal of Education and Work",
+        "tier": "core",
+        "openalex_id": "S32136629",
+        "issn": [
+          "1363-9080",
+          "1469-9435"
+        ],
+        "works_count": 979,
+        "relevance": "Education-to-work transitions, skills, and labor-market learning; strong fit for HRD workforce and careers themes."
+      },
+      {
+        "name": "Vocations and Learning",
+        "tier": "core",
+        "openalex_id": "S9600176",
+        "issn": [
+          "1874-785X",
+          "1874-7868"
+        ],
+        "works_count": 386,
+        "relevance": "Theory-forward journal on learning for and through work; reviewers expert in workplace pedagogy and professional development."
+      },
+      {
+        "name": "The Learning Organization",
+        "tier": "core",
+        "openalex_id": "S102624508",
+        "issn": [
+          "0969-6474",
+          "1758-7905"
+        ],
+        "works_count": 1192,
+        "relevance": "Organizational learning and knowledge journal; directly adjacent to HRD's organizational change and learning-culture work."
+      },
+      {
+        "name": "Management Learning",
+        "tier": "core",
+        "openalex_id": "S99768379",
+        "issn": [
+          "1350-5076",
+          "1461-7307"
+        ],
+        "works_count": 1737,
+        "relevance": "Critical journal on learning in management and organizations; reviewers cover leadership/management development overlapping HRD."
+      },
+      {
+        "name": "Higher Education, Skills and Work-based Learning",
+        "tier": "adjacent",
+        "openalex_id": "S2764428444",
+        "issn": [
+          "2042-3896",
+          "2042-390X"
+        ],
+        "works_count": 867,
+        "relevance": "Work-based and work-integrated learning, employability, and skills; reviewers relevant to HRD's workforce-development overlap."
+      },
+      {
+        "name": "Research in Post-Compulsory Education",
+        "tier": "adjacent",
+        "openalex_id": "S20419620",
+        "issn": [
+          "1359-6748",
+          "1747-5112"
+        ],
+        "works_count": 915,
+        "relevance": "Post-compulsory, further, and continuing education; reviewers cover adult learners and vocational/skills provision."
+      },
+      {
+        "name": "Empirical Research in Vocational Education and Training",
+        "tier": "adjacent",
+        "openalex_id": "S3035624105",
+        "issn": [
+          "1877-6337",
+          "1877-6345"
+        ],
+        "works_count": 251,
+        "relevance": "Open-access empirical VET journal (European); reviewers strong on quantitative skills/training research useful for HRD methods."
+      },
+      {
+        "name": "International Review of Education",
+        "tier": "adjacent",
+        "openalex_id": "S64594800",
+        "issn": [
+          "0020-8566",
+          "1573-0638"
+        ],
+        "works_count": 3971,
+        "relevance": "UNESCO Institute for Lifelong Learning journal; comparative lifelong-learning and education-policy reviewers with global reach."
+      },
+      {
+        "name": "Career Development International",
+        "tier": "adjacent",
+        "openalex_id": "S182336501",
+        "issn": [
+          "1362-0436",
+          "1758-6003"
+        ],
+        "works_count": 1399,
+        "relevance": "Careers, talent, and employee-development research; reviewers fit HRD careers, mobility, and talent-management manuscripts."
+      },
+      {
+        "name": "Journal of Career Development",
+        "tier": "adjacent",
+        "openalex_id": "S82530051",
+        "issn": [
+          "0894-8453",
+          "1556-0856",
+          "1573-3548"
+        ],
+        "works_count": 2260,
+        "relevance": "Career theory, development, and intervention; reviewers relevant to HRD career-development and talent themes."
+      },
+      {
+        "name": "Action Learning: Research and Practice",
+        "tier": "adjacent",
+        "openalex_id": "S60010591",
+        "issn": [
+          "1476-7333",
+          "1476-7341"
+        ],
+        "works_count": 888,
+        "relevance": "Action learning in organizational and professional development; reviewers cover experiential adult learning and leadership development."
+      },
+      {
+        "name": "Australian Journal of Adult Learning",
+        "tier": "adjacent",
+        "openalex_id": "S165736896",
+        "issn": [
+          "1443-1394"
+        ],
+        "works_count": 300,
+        "relevance": "Australasian adult/community learning journal adding regional breadth; reviewers in adult education, ACE, and workplace learning."
+      },
+      {
+        "name": "Educational Gerontology",
+        "tier": "adjacent",
+        "openalex_id": "S128457257",
+        "issn": [
+          "0360-1277",
+          "1521-0472"
+        ],
+        "works_count": 3689,
+        "relevance": "Older-adult and later-life learning; reviewers relevant to HRD aging-workforce, lifelong learning, and continuing education."
+      }
+    ]
+  },
+  {
+    "discipline": "Higher Education",
+    "journals": [
+      {
+        "name": "Studies in Higher Education",
+        "openalex_id": "S162196882",
+        "issn": [
+          "0307-5079",
+          "1470-174X"
+        ],
+        "works_count": 3659,
+        "tier": "flagship",
+        "relevance": "Field-defining HE journal; routinely publishes on academic/faculty development, careers, student learning, and HE workforce/policy that overlaps HRD."
+      },
+      {
+        "name": "Higher Education",
+        "openalex_id": "S94908168",
+        "issn": [
+          "0018-1560",
+          "1573-174X"
+        ],
+        "works_count": 4969,
+        "tier": "flagship",
+        "relevance": "Leading international HE journal; reviewers cover academic careers, organizational change in universities, and education-workforce policy adjacent to HRD."
+      },
+      {
+        "name": "The Journal of Higher Education",
+        "openalex_id": "S71326023",
+        "issn": [
+          "0022-1546",
+          "1538-4640"
+        ],
+        "works_count": 19262,
+        "tier": "flagship",
+        "relevance": "Premier US HE journal; strong pool for faculty development, organizational behavior in HE, and student/employee development scholarship."
+      },
+      {
+        "name": "Research in Higher Education",
+        "openalex_id": "S130619902",
+        "issn": [
+          "0361-0365",
+          "1573-188X"
+        ],
+        "works_count": 2440,
+        "tier": "flagship",
+        "relevance": "Top quantitative HE journal; reviewers expert in survey/panel methods on student success, persistence, and workforce outcomes useful for HRD-adjacent empirics."
+      },
+      {
+        "name": "Higher Education Research & Development",
+        "openalex_id": "S4210176587",
+        "issn": [
+          "0729-4360",
+          "1469-8366"
+        ],
+        "works_count": 2633,
+        "tier": "flagship",
+        "relevance": "Flagship Australasian HE journal; deep coverage of academic development, teaching/learning, and professional learning that maps onto HRD."
+      },
+      {
+        "name": "The Review of Higher Education",
+        "openalex_id": "S186832212",
+        "issn": [
+          "0162-5748",
+          "1090-7009"
+        ],
+        "works_count": 2212,
+        "tier": "core",
+        "relevance": "ASHE-affiliated journal strong on equity, organizational, and policy scholarship; reviewers handle diversity/equity in HE organizations."
+      },
+      {
+        "name": "Teaching in Higher Education",
+        "openalex_id": "S135873401",
+        "issn": [
+          "1356-2517",
+          "1470-1294"
+        ],
+        "works_count": 2135,
+        "tier": "core",
+        "relevance": "Central outlet for academic practice and faculty/educator development, directly adjacent to learning-and-development themes in HRD."
+      },
+      {
+        "name": "Higher Education Policy",
+        "openalex_id": "S95227037",
+        "issn": [
+          "0952-8733",
+          "1740-3863"
+        ],
+        "works_count": 1869,
+        "tier": "core",
+        "relevance": "IAU policy journal; reviewers cover workforce, skills, and education-policy questions central to national HRD agendas."
+      },
+      {
+        "name": "Higher Education Quarterly",
+        "openalex_id": "S184445340",
+        "issn": [
+          "0951-5224",
+          "1468-2273"
+        ],
+        "works_count": 3622,
+        "tier": "core",
+        "relevance": "Established UK HE journal spanning governance, careers, and organizational change in universities relevant to HRD."
+      },
+      {
+        "name": "Journal of Higher Education Policy and Management",
+        "openalex_id": "S104568202",
+        "issn": [
+          "1360-080X",
+          "1469-9508"
+        ],
+        "works_count": 1278,
+        "tier": "core",
+        "relevance": "Management-focused HE journal; reviewers expert in leadership, organizational change, and staff development in HE institutions."
+      },
+      {
+        "name": "Assessment & Evaluation in Higher Education",
+        "openalex_id": "S142259175",
+        "issn": [
+          "0260-2938",
+          "1469-297X"
+        ],
+        "works_count": 2457,
+        "tier": "core",
+        "relevance": "Core methods journal on evaluation of learning and programs, transferable to training evaluation and competency assessment in HRD."
+      },
+      {
+        "name": "The International Journal for Academic Development",
+        "openalex_id": "S16240985",
+        "issn": [
+          "1360-144X",
+          "1470-1324"
+        ],
+        "works_count": 1032,
+        "tier": "core",
+        "relevance": "The journal of faculty/educational developers; most direct HE analogue to HRD's professional-development and capability-building focus."
+      },
+      {
+        "name": "Studies in Continuing Education",
+        "openalex_id": "S147712636",
+        "issn": [
+          "0158-037X",
+          "1470-126X"
+        ],
+        "works_count": 980,
+        "tier": "core",
+        "relevance": "Bridges HE and adult/professional learning; reviewers cover workplace learning, CPD, and lifelong learning core to HRD."
+      },
+      {
+        "name": "Journal of College Student Development",
+        "openalex_id": "S10595604",
+        "issn": [
+          "0897-5264",
+          "1543-3382"
+        ],
+        "works_count": 2539,
+        "tier": "core",
+        "relevance": "Leading student-development journal; reviewers expert in developmental theory and learning outcomes applicable to employee/learner development."
+      },
+      {
+        "name": "Journal of Studies in International Education",
+        "openalex_id": "S50258942",
+        "issn": [
+          "1028-3153",
+          "1552-7808"
+        ],
+        "works_count": 1068,
+        "tier": "core",
+        "relevance": "Premier internationalization journal; reviewers cover global mobility, cross-cultural learning, and talent flows overlapping HRD/internationalization."
+      },
+      {
+        "name": "Innovative Higher Education",
+        "openalex_id": "S53132383",
+        "issn": [
+          "0742-5627",
+          "1573-1758"
+        ],
+        "works_count": 1575,
+        "tier": "core",
+        "relevance": "Covers innovation in teaching, faculty roles, and institutional change; reviewers handle organizational learning and development in HE."
+      },
+      {
+        "name": "Active Learning in Higher Education",
+        "openalex_id": "S63896471",
+        "issn": [
+          "1469-7874",
+          "1741-2625"
+        ],
+        "works_count": 681,
+        "tier": "adjacent",
+        "relevance": "Specialty learning-process journal; reviewers expert in instructional design and engagement transferable to training design in HRD."
+      },
+      {
+        "name": "Adult Education Quarterly",
+        "openalex_id": "S205875998",
+        "issn": [
+          "0741-7136",
+          "1552-3047"
+        ],
+        "works_count": 2800,
+        "tier": "adjacent",
+        "relevance": "Flagship adult-education journal; reviewers deeply versed in adult/workplace learning and transformative learning shared with HRD."
+      },
+      {
+        "name": "International Journal of Lifelong Education",
+        "openalex_id": "S56255037",
+        "issn": [
+          "0260-1370",
+          "1464-519X"
+        ],
+        "works_count": 2231,
+        "tier": "adjacent",
+        "relevance": "Lifelong/continuing learning journal; reviewers cover skills, reskilling, and workforce learning across the life course relevant to HRD."
+      },
+      {
+        "name": "Journal of Workplace Learning",
+        "openalex_id": "S161695446",
+        "issn": [
+          "1366-5626",
+          "1758-7859"
+        ],
+        "works_count": 1248,
+        "tier": "adjacent",
+        "relevance": "Squarely on workplace/organizational learning; among the closest education-side outlets to HRD's training-and-development core."
+      },
+      {
+        "name": "Vocations and Learning",
+        "openalex_id": "S9600176",
+        "issn": [
+          "1874-785X",
+          "1874-7868"
+        ],
+        "works_count": 386,
+        "tier": "adjacent",
+        "relevance": "Vocational and professional learning journal; reviewers cover skills development, TVET, and learning-at-work central to HRD."
+      },
+      {
+        "name": "Journal of Education and Work",
+        "openalex_id": "S32136629",
+        "issn": [
+          "1363-9080",
+          "1469-9435"
+        ],
+        "works_count": 979,
+        "tier": "adjacent",
+        "relevance": "Education-to-work and skills journal; reviewers expert in school/HE-to-work transitions, skills policy, and workforce development overlapping HRD."
+      },
+      {
+        "name": "Compare: A Journal of Comparative and International Education",
+        "openalex_id": "S129145296",
+        "issn": [
+          "0305-7925",
+          "1469-3623"
+        ],
+        "works_count": 2338,
+        "tier": "adjacent",
+        "relevance": "Comparative/international education journal; reviewers handle cross-national education and workforce policy relevant to national HRD systems."
+      },
+      {
+        "name": "Asia Pacific Education Review",
+        "openalex_id": "S184932276",
+        "issn": [
+          "1598-1037",
+          "1876-407X"
+        ],
+        "works_count": 1356,
+        "tier": "adjacent",
+        "relevance": "Regional Asia-Pacific journal; adds geographic breadth and reviewers familiar with HE, skills, and education-workforce issues in Asian contexts."
+      }
+    ]
+  },
+  {
+    "discipline": "Management & Organizational Behavior",
+    "journals": [
+      {
+        "name": "Academy of Management Journal",
+        "tier": "flagship",
+        "openalex_id": "S117778295",
+        "issn": [
+          "0001-4273",
+          "1948-0989"
+        ],
+        "works_count": 6911,
+        "relevance": "Premier empirical management journal; reviewers cover HRM, careers, leadership, and organizational change at the field-defining level."
+      },
+      {
+        "name": "Academy of Management Review",
+        "tier": "flagship",
+        "openalex_id": "S46763546",
+        "issn": [
+          "0363-7425",
+          "1930-3807"
+        ],
+        "works_count": 5684,
+        "relevance": "Top theory journal in management; reviewers handle conceptual work on learning, development, and organizational change relevant to HRD."
+      },
+      {
+        "name": "Journal of Applied Psychology",
+        "tier": "flagship",
+        "openalex_id": "S166002381",
+        "issn": [
+          "0021-9010",
+          "1939-1854"
+        ],
+        "works_count": 13607,
+        "relevance": "Flagship for training, employee development, selection, and motivation; deep bench of reviewers on workplace learning and talent."
+      },
+      {
+        "name": "Administrative Science Quarterly",
+        "tier": "adjacent",
+        "openalex_id": "S143668711",
+        "issn": [
+          "0001-8392",
+          "1930-3815"
+        ],
+        "works_count": 4342,
+        "relevance": "Elite organization-theory journal; reviewers cover organizational change and institutional dynamics adjacent to workforce development."
+      },
+      {
+        "name": "Journal of Management",
+        "tier": "flagship",
+        "openalex_id": "S122767448",
+        "issn": [
+          "0149-2063",
+          "1557-1211"
+        ],
+        "works_count": 3375,
+        "relevance": "Broad top-tier management journal with strong HRM, leadership, and careers coverage for finding HRD-adjacent reviewers."
+      },
+      {
+        "name": "Journal of Organizational Behavior",
+        "tier": "flagship",
+        "openalex_id": "S160573970",
+        "issn": [
+          "0894-3796",
+          "1099-1379"
+        ],
+        "works_count": 3408,
+        "relevance": "Leading OB journal; reviewers expert in employee development, careers, engagement, and learning at work."
+      },
+      {
+        "name": "Human Resource Management",
+        "tier": "flagship",
+        "openalex_id": "S134094273",
+        "issn": [
+          "0090-4848",
+          "1099-050X"
+        ],
+        "works_count": 3704,
+        "relevance": "Top HRM journal (Wiley); core reviewer pool for training, talent management, and HR development."
+      },
+      {
+        "name": "Human Resource Management Journal",
+        "tier": "core",
+        "openalex_id": "S113497174",
+        "issn": [
+          "0954-5395",
+          "1748-8583"
+        ],
+        "works_count": 1421,
+        "relevance": "Leading European HRM journal; reviewers cover learning, skills, careers, and employment relations central to HRD."
+      },
+      {
+        "name": "The International Journal of Human Resource Management",
+        "tier": "core",
+        "openalex_id": "S184846731",
+        "issn": [
+          "0958-5192",
+          "1466-4399"
+        ],
+        "works_count": 4262,
+        "relevance": "Flagship for international/comparative HRM; strong fit for cross-national HRD, talent mobility, and workforce policy reviewers."
+      },
+      {
+        "name": "Human Resource Development Quarterly",
+        "tier": "flagship",
+        "openalex_id": "S191693275",
+        "issn": [
+          "1044-8004",
+          "1532-1096"
+        ],
+        "works_count": 1542,
+        "relevance": "Field-defining empirical HRD journal (AHRD); the central reviewer pool for training, development, and workplace learning."
+      },
+      {
+        "name": "Human Resource Development Review",
+        "tier": "flagship",
+        "openalex_id": "S37660120",
+        "issn": [
+          "1534-4843",
+          "1552-6712"
+        ],
+        "works_count": 609,
+        "relevance": "AHRD theory journal; reviewers specialize in HRD frameworks, learning theory, and conceptual development scholarship."
+      },
+      {
+        "name": "Human Resource Development International",
+        "tier": "flagship",
+        "openalex_id": "S140059072",
+        "issn": [
+          "1367-8868",
+          "1469-8374"
+        ],
+        "works_count": 1306,
+        "relevance": "AHRD international journal; reviewers cover national/regional HRD, cross-cultural development, and policy."
+      },
+      {
+        "name": "Advances in Developing Human Resources",
+        "tier": "core",
+        "openalex_id": "S49321836",
+        "issn": [
+          "1523-4223",
+          "1552-3055"
+        ],
+        "works_count": 940,
+        "relevance": "AHRD thematic journal; reviewers span the full HRD agenda including leadership development and workforce issues."
+      },
+      {
+        "name": "European Journal of Training and Development",
+        "tier": "core",
+        "openalex_id": "S2764516016",
+        "issn": [
+          "2046-9012",
+          "2046-9020"
+        ],
+        "works_count": 758,
+        "relevance": "Dedicated training and development journal (Emerald); reviewers focused squarely on T&D and workplace learning."
+      },
+      {
+        "name": "International Journal of Training and Development",
+        "tier": "core",
+        "openalex_id": "S114439130",
+        "issn": [
+          "1360-3736",
+          "1468-2419"
+        ],
+        "works_count": 917,
+        "relevance": "Specialist comparative training journal; reviewers cover skills, VET, and training policy across countries."
+      },
+      {
+        "name": "Journal of Workplace Learning",
+        "tier": "core",
+        "openalex_id": "S161695446",
+        "issn": [
+          "1366-5626",
+          "1758-7859"
+        ],
+        "works_count": 1248,
+        "relevance": "Core outlet for adult/workplace learning; reviewers expert in informal learning and continuing development."
+      },
+      {
+        "name": "The Learning Organization",
+        "tier": "core",
+        "openalex_id": "S102624508",
+        "issn": [
+          "0969-6474",
+          "1758-7905"
+        ],
+        "works_count": 1192,
+        "relevance": "Focused on organizational learning and knowledge; reviewers cover learning culture and capability building."
+      },
+      {
+        "name": "Career Development International",
+        "tier": "core",
+        "openalex_id": "S182336501",
+        "issn": [
+          "1362-0436",
+          "1758-6003"
+        ],
+        "works_count": 1399,
+        "relevance": "Specialist careers journal; reviewers cover career development, talent, and employability central to HRD."
+      },
+      {
+        "name": "Journal of Vocational Behavior",
+        "tier": "core",
+        "openalex_id": "S25746158",
+        "issn": [
+          "0001-8791",
+          "1095-9084"
+        ],
+        "works_count": 4034,
+        "relevance": "Premier careers/vocational journal; strong reviewer pool on career development, work transitions, and skills."
+      },
+      {
+        "name": "The Leadership Quarterly",
+        "tier": "core",
+        "openalex_id": "S152304618",
+        "issn": [
+          "1048-9843",
+          "1873-3409"
+        ],
+        "works_count": 2073,
+        "relevance": "Top leadership journal; reviewers cover leadership and leader development directly relevant to HRD."
+      },
+      {
+        "name": "Academy of Management Learning and Education",
+        "tier": "core",
+        "openalex_id": "S45682993",
+        "issn": [
+          "1537-260X",
+          "1944-9585"
+        ],
+        "works_count": 1548,
+        "relevance": "Leading journal on management learning and education; reviewers cover development pedagogy and capability building."
+      },
+      {
+        "name": "Asia Pacific Journal of Human Resources",
+        "tier": "core",
+        "openalex_id": "S206927904",
+        "issn": [
+          "1038-4111",
+          "1744-7941"
+        ],
+        "works_count": 2459,
+        "relevance": "Leading Australasian/Asian HRM journal; reviewers ideal for regional HRD, talent, and workforce-development work."
+      },
+      {
+        "name": "Personnel Review",
+        "tier": "adjacent",
+        "openalex_id": "S139232146",
+        "issn": [
+          "0048-3486",
+          "1758-6933"
+        ],
+        "works_count": 2696,
+        "relevance": "Broad HRM/employment journal; reviewers cover training, careers, and HR practices adjacent to HRD."
+      },
+      {
+        "name": "Equality Diversity and Inclusion: An International Journal",
+        "tier": "adjacent",
+        "openalex_id": "S97033246",
+        "issn": [
+          "2040-7149",
+          "2040-7157"
+        ],
+        "works_count": 1143,
+        "relevance": "Core diversity/equity-in-organizations journal; reviewers fit DEI dimensions of HRD and workforce development."
+      },
+      {
+        "name": "Gender in Management: An International Journal",
+        "tier": "adjacent",
+        "openalex_id": "S175013504",
+        "issn": [
+          "1754-2413",
+          "1754-2421"
+        ],
+        "works_count": 865,
+        "relevance": "Focused on gender and equity in organizations; reviewers cover diversity in development, leadership, and careers."
+      },
+      {
+        "name": "Studies in Continuing Education",
+        "tier": "adjacent",
+        "openalex_id": "S147712636",
+        "issn": [
+          "0158-037X",
+          "1470-126X"
+        ],
+        "works_count": 980,
+        "relevance": "Adult/continuing education journal (Australian-based); reviewers cover lifelong and workplace learning relevant to HRD."
+      },
+      {
+        "name": "Vocations and Learning",
+        "tier": "adjacent",
+        "openalex_id": "S9600176",
+        "issn": [
+          "1874-785X",
+          "1874-7868"
+        ],
+        "works_count": 386,
+        "relevance": "European journal on vocational learning; reviewers cover skill formation, VET, and learning-for-work bridging HRD and education policy."
+      }
+    ]
+  },
+  {
+    "discipline": "Career, Vocational & Workforce Development",
+    "journals": [
+      {
+        "name": "Human Resource Development Quarterly",
+        "tier": "flagship",
+        "openalex_id": "S191693275",
+        "issn": [
+          "1044-8004",
+          "1532-1096"
+        ],
+        "works_count": 1542,
+        "relevance": "Field-defining HRD journal; reviewers cover training, workplace learning, careers, talent."
+      },
+      {
+        "name": "Human Resource Development Review",
+        "tier": "flagship",
+        "openalex_id": "S37660120",
+        "issn": [
+          "1534-4843",
+          "1552-6712"
+        ],
+        "works_count": 609,
+        "relevance": "Theory-building HRD flagship; reviewers expert in HRD frameworks and integrative reviews."
+      },
+      {
+        "name": "Human Resource Development International",
+        "tier": "flagship",
+        "openalex_id": "S140059072",
+        "issn": [
+          "1367-8868",
+          "1469-8374"
+        ],
+        "works_count": 1306,
+        "relevance": "Internationally oriented HRD flagship; reviewers handle cross-national HRD, NHRD, policy."
+      },
+      {
+        "name": "Advances in Developing Human Resources",
+        "tier": "core",
+        "openalex_id": "S49321836",
+        "issn": [
+          "1523-4223",
+          "1552-3055"
+        ],
+        "works_count": 940,
+        "relevance": "Thematic HRD journal; reviewers span leadership development, careers, organizational change."
+      },
+      {
+        "name": "European Journal of Training and Development",
+        "tier": "core",
+        "openalex_id": "S2764516016",
+        "issn": [
+          "2046-9012",
+          "2046-9020"
+        ],
+        "works_count": 758,
+        "relevance": "Core HRD/training journal (European base); reviewers cover T&D, learning, careers."
+      },
+      {
+        "name": "International Journal of Training and Development",
+        "tier": "core",
+        "openalex_id": "S114439130",
+        "issn": [
+          "1360-3736",
+          "1468-2419"
+        ],
+        "works_count": 917,
+        "relevance": "Central training-and-development journal; reviewers expert in workplace training and skills."
+      },
+      {
+        "name": "Journal of Workplace Learning",
+        "tier": "core",
+        "openalex_id": "S161695446",
+        "issn": [
+          "1366-5626",
+          "1758-7859"
+        ],
+        "works_count": 1248,
+        "relevance": "Core workplace/adult learning outlet directly overlapping HRD learning themes."
+      },
+      {
+        "name": "Journal of Vocational Education and Training",
+        "tier": "core",
+        "openalex_id": "S4210171403",
+        "issn": [
+          "1363-6820",
+          "1747-5090"
+        ],
+        "works_count": 1342,
+        "relevance": "Leading TVET journal; reviewers cover vocational education, skills, work transitions."
+      },
+      {
+        "name": "Vocations and Learning",
+        "tier": "core",
+        "openalex_id": "S9600176",
+        "issn": [
+          "1874-785X",
+          "1874-7868"
+        ],
+        "works_count": 386,
+        "relevance": "Vocational learning and professional development; strong workplace-learning reviewer pool."
+      },
+      {
+        "name": "Journal of Education and Work",
+        "tier": "core",
+        "openalex_id": "S32136629",
+        "issn": [
+          "1363-9080",
+          "1469-9435"
+        ],
+        "works_count": 979,
+        "relevance": "Education-to-work transitions, skills, workforce policy; HRD-adjacent reviewers."
+      },
+      {
+        "name": "Journal of Vocational Behavior",
+        "tier": "core",
+        "openalex_id": "S25746158",
+        "issn": [
+          "0001-8791",
+          "1095-9084"
+        ],
+        "works_count": 4034,
+        "relevance": "Flagship careers/vocational psychology; reviewers expert in career development and talent."
+      },
+      {
+        "name": "Career Development International",
+        "tier": "core",
+        "openalex_id": "S182336501",
+        "issn": [
+          "1362-0436",
+          "1758-6003"
+        ],
+        "works_count": 1399,
+        "relevance": "Careers in organizational context; reviewers overlap HRD career and talent management."
+      },
+      {
+        "name": "Journal of Career Development",
+        "tier": "core",
+        "openalex_id": "S82530051",
+        "issn": [
+          "0894-8453",
+          "1556-0856",
+          "1573-3548"
+        ],
+        "works_count": 2260,
+        "relevance": "Core career development journal; reviewers cover career interventions and workforce entry."
+      },
+      {
+        "name": "The Career Development Quarterly",
+        "tier": "core",
+        "openalex_id": "S105044966",
+        "issn": [
+          "0889-4019",
+          "2161-0045"
+        ],
+        "works_count": 1635,
+        "relevance": "Career counseling and development; reviewers for career theory and guidance practice."
+      },
+      {
+        "name": "International Journal for Educational and Vocational Guidance",
+        "tier": "core",
+        "openalex_id": "S4210206506",
+        "issn": [
+          "1573-1782",
+          "1873-0388"
+        ],
+        "works_count": 781,
+        "relevance": "International career guidance and vocational counseling reviewer base."
+      },
+      {
+        "name": "International Journal for Research in Vocational Education and Training",
+        "tier": "core",
+        "openalex_id": "S2736341217",
+        "issn": [
+          "2197-8638",
+          "2197-8646"
+        ],
+        "works_count": 223,
+        "relevance": "International TVET research outlet; reviewers in skills systems and vocational pedagogy."
+      },
+      {
+        "name": "Empirical Research in Vocational Education and Training",
+        "tier": "adjacent",
+        "openalex_id": "S3035624105",
+        "issn": [
+          "1877-6337",
+          "1877-6345"
+        ],
+        "works_count": 251,
+        "relevance": "Empirical European TVET journal; reviewers for skills measurement and training outcomes."
+      },
+      {
+        "name": "Adult Education Quarterly",
+        "tier": "core",
+        "openalex_id": "S205875998",
+        "issn": [
+          "0741-7136",
+          "1552-3047"
+        ],
+        "works_count": 2800,
+        "relevance": "Flagship adult education; reviewers cover adult/transformative learning central to HRD."
+      },
+      {
+        "name": "Studies in Continuing Education",
+        "tier": "adjacent",
+        "openalex_id": "S147712636",
+        "issn": [
+          "0158-037X",
+          "1470-126X"
+        ],
+        "works_count": 980,
+        "relevance": "Continuing/professional education; reviewers for lifelong learning and workplace development."
+      },
+      {
+        "name": "International Journal of Lifelong Education",
+        "tier": "adjacent",
+        "openalex_id": "S56255037",
+        "issn": [
+          "0260-1370",
+          "1464-519X"
+        ],
+        "works_count": 2231,
+        "relevance": "Lifelong learning and education policy; reviewers adjacent to workforce learning."
+      },
+      {
+        "name": "Higher Education, Skills and Work-based Learning",
+        "tier": "core",
+        "openalex_id": "S2764428444",
+        "issn": [
+          "2042-3896",
+          "2042-390X"
+        ],
+        "works_count": 867,
+        "relevance": "Work-based learning and employability; reviewers bridge skills development and HRD."
+      },
+      {
+        "name": "Education + Training",
+        "tier": "core",
+        "openalex_id": "S2764459744",
+        "issn": [
+          "0040-0912",
+          "1758-6127"
+        ],
+        "works_count": 5282,
+        "relevance": "Skills, employability, training and enterprise; broad workforce-development reviewer pool."
+      },
+      {
+        "name": "International Journal of Manpower",
+        "tier": "adjacent",
+        "openalex_id": "S201037040",
+        "issn": [
+          "0143-7720",
+          "1758-6577"
+        ],
+        "works_count": 2218,
+        "relevance": "Labor economics and workforce/skills policy; reviewers for HRD macro and human capital."
+      },
+      {
+        "name": "Personnel Review",
+        "tier": "adjacent",
+        "openalex_id": "S139232146",
+        "issn": [
+          "0048-3486",
+          "1758-6933"
+        ],
+        "works_count": 2696,
+        "relevance": "HRM journal covering development, careers, and learning; HRD-adjacent reviewers."
+      },
+      {
+        "name": "Journal of Management Development",
+        "tier": "adjacent",
+        "openalex_id": "S204305389",
+        "issn": [
+          "0262-1711",
+          "1758-7492"
+        ],
+        "works_count": 2492,
+        "relevance": "Management/leadership development; reviewers overlap HRD leadership-development work."
+      },
+      {
+        "name": "Asia Pacific Journal of Human Resources",
+        "tier": "adjacent",
+        "openalex_id": "S206927904",
+        "issn": [
+          "1038-4111",
+          "1744-7941"
+        ],
+        "works_count": 2459,
+        "relevance": "Regional (Asia-Pacific) HRM/HRD; reviewers for development and talent in Asian contexts."
+      },
+      {
+        "name": "Australian Journal of Career Development",
+        "tier": "adjacent",
+        "openalex_id": "S4394735601",
+        "issn": [
+          "2200-6974"
+        ],
+        "works_count": 1190,
+        "relevance": "Regional (Australian) careers journal; reviewers for career development and guidance."
+      }
+    ]
+  },
+  {
+    "discipline": "International & Comparative Education",
+    "journals": [
+      {
+        "name": "Comparative Education Review",
+        "tier": "flagship",
+        "openalex_id": "S168329810",
+        "issn": [
+          "0010-4086",
+          "1545-701X"
+        ],
+        "works_count": 7651,
+        "relevance": "Field-defining CIE journal; reviewers cover education-and-development, workforce/education policy, and equity comparatively across nations relevant to HRD's national-systems work."
+      },
+      {
+        "name": "Comparative Education",
+        "tier": "flagship",
+        "openalex_id": "S109675028",
+        "issn": [
+          "0305-0068",
+          "1360-0486"
+        ],
+        "works_count": 2169,
+        "relevance": "Leading UK comparative-education flagship; reviewers handle cross-national education systems, policy transfer, and skills/development themes adjacent to national HRD."
+      },
+      {
+        "name": "International Journal of Educational Development",
+        "tier": "flagship",
+        "openalex_id": "S20152851",
+        "issn": [
+          "0738-0593",
+          "1873-4871"
+        ],
+        "works_count": 4020,
+        "relevance": "Premier education-and-development journal; strong on skills, TVET, workforce development and education policy in the Global South, directly overlapping HRD-at-scale."
+      },
+      {
+        "name": "Compare: A Journal of Comparative and International Education",
+        "tier": "flagship",
+        "openalex_id": "S129145296",
+        "issn": [
+          "0305-7925",
+          "1469-3623"
+        ],
+        "works_count": 2338,
+        "relevance": "BAICE flagship in comparative/international education; reviewers cover education policy, internationalization, and development with capability-building angles."
+      },
+      {
+        "name": "Higher Education",
+        "tier": "core",
+        "openalex_id": "S94908168",
+        "issn": [
+          "0018-1560",
+          "1573-174X"
+        ],
+        "works_count": 4969,
+        "relevance": "Leading international higher-education journal; reviewers handle graduate skills, academic careers, talent and institutional change relevant to HRD."
+      },
+      {
+        "name": "Studies in Higher Education",
+        "tier": "core",
+        "openalex_id": "S162196882",
+        "issn": [
+          "0307-5079",
+          "1470-174X"
+        ],
+        "works_count": 3659,
+        "relevance": "Top higher-education journal covering employability, graduate careers, academic development and learning, overlapping talent/career HRD themes."
+      },
+      {
+        "name": "Journal of Studies in International Education",
+        "tier": "core",
+        "openalex_id": "S50258942",
+        "issn": [
+          "1028-3153",
+          "1552-7808"
+        ],
+        "works_count": 1068,
+        "relevance": "Central outlet for internationalization and international students/study abroad; reviewers cover global mobility and cross-cultural learning adjacent to HRD."
+      },
+      {
+        "name": "Globalisation, Societies and Education",
+        "tier": "core",
+        "openalex_id": "S187925018",
+        "issn": [
+          "1476-7724",
+          "1476-7732"
+        ],
+        "works_count": 1242,
+        "relevance": "Globalization-of-education journal; reviewers address skills regimes, workforce/education policy, and equity under globalization relevant to national HRD."
+      },
+      {
+        "name": "Research in Comparative and International Education",
+        "tier": "core",
+        "openalex_id": "S47223233",
+        "issn": [
+          "1745-4999"
+        ],
+        "works_count": 700,
+        "relevance": "Dedicated CIE methods-and-substance journal; reviewers cover cross-national education policy and development squarely adjacent to comparative HRD."
+      },
+      {
+        "name": "International Review of Education",
+        "tier": "core",
+        "openalex_id": "S64594800",
+        "issn": [
+          "0020-8566",
+          "1573-0638"
+        ],
+        "works_count": 3971,
+        "relevance": "UNESCO Institute for Lifelong Learning journal; reviewers span lifelong/adult learning and comparative education policy core to HRD's learning agenda."
+      },
+      {
+        "name": "Prospects",
+        "tier": "core",
+        "openalex_id": "S4210201494",
+        "issn": [
+          "0033-1538",
+          "1573-9090"
+        ],
+        "works_count": 2725,
+        "relevance": "UNESCO-IBE comparative education and curriculum/policy journal; reviewers cover education systems and workforce-relevant policy across regions."
+      },
+      {
+        "name": "Journal of Education Policy",
+        "tier": "core",
+        "openalex_id": "S47924309",
+        "issn": [
+          "0268-0939",
+          "1464-5106"
+        ],
+        "works_count": 2140,
+        "relevance": "Leading education-policy journal; reviewers analyze workforce/skills policy, governance and equity, overlapping HRD's education-and-workforce-policy themes."
+      },
+      {
+        "name": "Higher Education Policy",
+        "tier": "core",
+        "openalex_id": "S95227037",
+        "issn": [
+          "0952-8733",
+          "1740-3863"
+        ],
+        "works_count": 1869,
+        "relevance": "IAU journal on higher-education governance and policy; reviewers cover talent, internationalization and human-capital policy adjacent to HRD."
+      },
+      {
+        "name": "International Journal of Training and Development",
+        "tier": "flagship",
+        "openalex_id": "S114439130",
+        "issn": [
+          "1360-3736",
+          "1468-2419"
+        ],
+        "works_count": 917,
+        "relevance": "Core HRD/training journal with strong comparative and national-VET focus; reviewers are squarely HRD training-and-development specialists."
+      },
+      {
+        "name": "Journal of Vocational Education and Training",
+        "tier": "core",
+        "openalex_id": "S4210171403",
+        "issn": [
+          "1363-6820",
+          "1747-5090"
+        ],
+        "works_count": 1342,
+        "relevance": "Leading VET/TVET journal; reviewers cover skills formation, workplace learning and qualifications frameworks central to workforce HRD."
+      },
+      {
+        "name": "Journal of Education and Work",
+        "tier": "core",
+        "openalex_id": "S32136629",
+        "issn": [
+          "1363-9080",
+          "1469-9435"
+        ],
+        "works_count": 979,
+        "relevance": "Education-to-work transitions, skills and labor markets; reviewers bridge education policy and workforce development core to HRD."
+      },
+      {
+        "name": "International Journal of Lifelong Education",
+        "tier": "core",
+        "openalex_id": "S56255037",
+        "issn": [
+          "0260-1370",
+          "1464-519X"
+        ],
+        "works_count": 2231,
+        "relevance": "Flagship lifelong/adult education journal; reviewers cover adult learning, continuing education and workforce upskilling adjacent to HRD."
+      },
+      {
+        "name": "Adult Education Quarterly",
+        "tier": "core",
+        "openalex_id": "S205875998",
+        "issn": [
+          "0741-7136",
+          "1552-3047"
+        ],
+        "works_count": 2800,
+        "relevance": "Premier adult-education research journal; reviewers handle adult/workplace learning and professional development directly overlapping HRD."
+      },
+      {
+        "name": "Studies in Continuing Education",
+        "tier": "adjacent",
+        "openalex_id": "S147712636",
+        "issn": [
+          "0158-037X",
+          "1470-126X"
+        ],
+        "works_count": 980,
+        "relevance": "Australasian journal on professional, continuing and workplace learning; reviewers cover practice-based learning relevant to HRD."
+      },
+      {
+        "name": "Vocations and Learning",
+        "tier": "adjacent",
+        "openalex_id": "S9600176",
+        "issn": [
+          "1874-785X",
+          "1874-7868"
+        ],
+        "works_count": 386,
+        "relevance": "Studies in vocational and professional learning; reviewers cover workplace learning, competence and skill development adjacent to HRD."
+      },
+      {
+        "name": "Education Economics",
+        "tier": "adjacent",
+        "openalex_id": "S5043877",
+        "issn": [
+          "0964-5292",
+          "1469-5782"
+        ],
+        "works_count": 1141,
+        "relevance": "Economics-of-education journal; reviewers analyze human-capital, returns to training/education and skills supply relevant to HRD's macro agenda."
+      },
+      {
+        "name": "Asia Pacific Education Review",
+        "tier": "adjacent",
+        "openalex_id": "S184932276",
+        "issn": [
+          "1598-1037",
+          "1876-407X"
+        ],
+        "works_count": 1356,
+        "relevance": "Regional Asia-Pacific education journal; reviewers cover education policy, human-capital and development in contexts overlapping ASEAN HRD."
+      },
+      {
+        "name": "Asia Pacific Journal of Education",
+        "tier": "adjacent",
+        "openalex_id": "S157687834",
+        "issn": [
+          "0218-8791",
+          "1742-6855"
+        ],
+        "works_count": 1450,
+        "relevance": "Asia-Pacific education and policy journal; reviewers bring regional expertise on education systems and skills relevant to comparative HRD."
+      },
+      {
+        "name": "European Journal of Education",
+        "tier": "adjacent",
+        "openalex_id": "S71191459",
+        "issn": [
+          "0141-8211",
+          "1465-3435"
+        ],
+        "works_count": 2957,
+        "relevance": "Policy-oriented European education journal; reviewers cover lifelong learning, skills and education governance adjacent to HRD/workforce policy."
+      }
+    ]
+  }
+]

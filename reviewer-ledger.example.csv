@@ -1,0 +1,5 @@
+name,orcid,openalex_id,last_invited,status,note
+Jane Doe,,,2025-11-01,invited,recently invited (cools down ~12 mo after last_invited)
+John Roe,0000-0002-1234-5678,,,declined,declined twice — permanently skipped while status=declined
+,,A5012345678,2024-03-15,invited,matched by OpenAlex id; old enough to be eligible again
+Sample Overtapped,,,,blocked,no date + status=blocked => always skipped

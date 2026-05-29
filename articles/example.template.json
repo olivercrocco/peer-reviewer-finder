@@ -1,0 +1,41 @@
+{
+  "slug": "example_submission",
+  "title": "FICTIONAL EXAMPLE — Psychological Safety and Team Learning in Distributed Teams: A Systematic Review",
+  "abstract": "Replace this with the manuscript abstract. (This is a synthetic placeholder, not a real submission.) The abstract is used only for the best-effort self-match lookup; the matching itself is driven by the tiered terms below.",
+
+  "_comment_terms": "Sort the manuscript's keywords into tiers by how DISTINCTIVE each is to this paper. core = its defining subject (weighted x3). secondary = related constructs it touches (x1). method_primary = its actual method, e.g. bibliometrics/meta-analysis (x2). method_generic = common methods that are weak discriminators, e.g. literature review (x0.8). context = setting (x0.4). A term earns credit only when it actually appears in a candidate's title/abstract.",
+  "core_terms": ["psychological safety", "team learning", "virtual teams"],
+  "secondary_terms": ["knowledge sharing", "employee voice", "team performance"],
+  "method_primary_terms": ["meta-analysis"],
+  "method_generic_terms": ["systematic literature review", "integrative literature review"],
+  "context_terms": ["remote work"],
+
+  "_comment_scope": "disciplines: optional subset of the journal registry to search (omit for ALL). Run `python -m reviewer_id --list-disciplines` to see options. journals: optional explicit list of journal names/ids to restrict to.",
+  "disciplines": null,
+  "journals": null,
+
+  "_comment_confidential": "confidential (default true): send OpenAlex ONLY generic topic terms — never the title, abstract, your email, or author-institution names; no AI/LLM ever sees the manuscript. Set false only for already-published work (enables the title self-match lookup). CLI --confidential / --no-confidential overrides this.",
+  "confidential": true,
+
+  "_comment_coi": "author_institutions: the submitting authors' institutions — any candidate affiliated with one is excluded (in confidential mode matched LOCALLY, so give full names). This is also the no-names way to drop the authors themselves. author_orcids: optional ORCID iDs (not names) of the submitting authors — enables excluding the authors AND their recent co-authors; opt-in in confidential mode via screen_coauthors because it transmits the ORCIDs.",
+  "author_institutions": ["Example State University", "University of Somewhere"],
+  "author_orcids": [],
+  "screen_coauthors": false,
+  "exclude_author_names": [],
+  "exclude_author_ids": [],
+
+  "_comment_ledger": "reviewer_ledger: optional path to a local CSV of reviewers to skip (recently invited / declined / ineligible in your system). Auto-uses reviewer-ledger.csv if present. ledger_cooldown_months: dated entries become eligible again after this many months. CLI: --ledger PATH / --no-ledger / --ledger-cooldown N. Local & confidential — never transmitted.",
+  "reviewer_ledger": null,
+  "ledger_cooldown_months": 12,
+
+  "_comment_panel": "Optional scorecard the suggested panel tries to satisfy (defaults shown). Boxes the pool can't fill are reported, not silently dropped. Override any subset.",
+  "panel": {
+    "size": 9,
+    "max_per_institution": 1,
+    "min_countries": 4,
+    "min_disciplines": 2,
+    "min_method_experts": 1,
+    "min_early_career": 1,
+    "min_senior": 1
+  }
+}
