@@ -1,8 +1,11 @@
 # peer-reviewer-finder
 
-Find well-matched, conflict-free, and diverse peer reviewers for a manuscript,
-using [OpenAlex](https://openalex.org). Built for journal editors who need a
-defensible shortlist quickly.
+Find well-matched, conflict-free, and diverse peer reviewers for a manuscript in
+**human resource development and adjacent fields**, using
+[OpenAlex](https://openalex.org). Built for journal editors in HRD, adult and
+continuing education, management, and related fields who need a defensible
+shortlist quickly. The journal registry is configurable, so it can be retargeted
+to other fields.
 
 Given a manuscript (title, abstract, and a few tiered keywords) plus the
 submitting authors' institutions, the pipeline:
