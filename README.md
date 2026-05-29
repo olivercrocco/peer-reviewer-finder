@@ -12,11 +12,11 @@ to other fields.
 Given a manuscript (title, abstract, and a few tiered keywords) plus the
 submitting authors' institutions, the pipeline:
 
-- searches a configurable registry of **83 scholarly journals across 6
+- searches a configurable registry of **97 scholarly journals across 7
   disciplines** (HRD, Adult & Continuing Education, Higher Education, Management
-  & Organizational Behavior, Career/Vocational/Workforce Development, and
-  International & Comparative Education) for authors whose published work
-  **genuinely** matches the manuscript;
+  & Organizational Behavior, Industrial-Organizational Psychology,
+  Career/Vocational/Workforce Development, and International & Comparative
+  Education) for authors whose published work **genuinely** matches the manuscript;
 - screens **conflicts of interest** — excludes anyone from a submitting author's
   institution, and ensures the recommended reviewers haven't co-authored with one
   another;

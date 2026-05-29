@@ -1676,5 +1676,171 @@
         "relevance": "Policy-oriented European education journal; reviewers cover lifelong learning, skills and education governance adjacent to HRD/workforce policy."
       }
     ]
+  },
+  {
+    "discipline": "Industrial-Organizational Psychology",
+    "journals": [
+      {
+        "name": "Journal of Applied Psychology",
+        "issn": [
+          "0021-9010",
+          "1939-1854"
+        ],
+        "tier": "flagship",
+        "relevance": "Premier IO psychology journal: selection, training, motivation, performance."
+      },
+      {
+        "name": "Personnel Psychology",
+        "issn": [
+          "0031-5826",
+          "1744-6570"
+        ],
+        "tier": "flagship",
+        "relevance": "Core IO journal on selection, development, and work outcomes."
+      },
+      {
+        "name": "Journal of Organizational Behavior",
+        "issn": [
+          "0894-3796",
+          "1099-1379"
+        ],
+        "tier": "flagship",
+        "relevance": "Micro-OB and work behavior; heavy HRD overlap."
+      },
+      {
+        "name": "Organizational Behavior and Human Decision Processes",
+        "issn": [
+          "0749-5978",
+          "1095-9920"
+        ],
+        "tier": "flagship",
+        "relevance": "Foundational OB and decision research; strong methods."
+      },
+      {
+        "name": "The Leadership Quarterly",
+        "issn": [
+          "1048-9843"
+        ],
+        "tier": "flagship",
+        "relevance": "Leading leadership-science journal across psychology and management."
+      },
+      {
+        "name": "Journal of Occupational and Organizational Psychology",
+        "issn": [
+          "0963-1798",
+          "2044-8325"
+        ],
+        "tier": "core",
+        "relevance": "British IO/work psychology flagship."
+      },
+      {
+        "name": "Journal of Vocational Behavior",
+        "issn": [
+          "0001-8791",
+          "1095-9084"
+        ],
+        "tier": "core",
+        "relevance": "Careers, vocational development, work transitions."
+      },
+      {
+        "name": "Journal of Business and Psychology",
+        "issn": [
+          "0889-3268",
+          "1573-353X"
+        ],
+        "tier": "core",
+        "relevance": "Applied work psychology bridging IO and management."
+      },
+      {
+        "name": "Journal of Occupational Health Psychology",
+        "issn": [
+          "1076-8998",
+          "1939-1307"
+        ],
+        "tier": "core",
+        "relevance": "Well-being, stress, occupational health at work."
+      },
+      {
+        "name": "Work & Stress",
+        "issn": [
+          "0267-8373",
+          "1464-5335"
+        ],
+        "tier": "core",
+        "relevance": "Work stress, well-being, occupational health psychology."
+      },
+      {
+        "name": "European Journal of Work and Organizational Psychology",
+        "issn": [
+          "1359-432X",
+          "1464-0643"
+        ],
+        "tier": "core",
+        "relevance": "European IO/work psychology flagship."
+      },
+      {
+        "name": "Applied Psychology: An International Review",
+        "issn": [
+          "0269-994X",
+          "1464-0597"
+        ],
+        "tier": "core",
+        "relevance": "International applied psychology incl. work/organizational."
+      },
+      {
+        "name": "Human Performance",
+        "issn": [
+          "0895-9285",
+          "1532-7043"
+        ],
+        "tier": "core",
+        "relevance": "Individual performance, abilities, assessment."
+      },
+      {
+        "name": "Group & Organization Management",
+        "issn": [
+          "1059-6011",
+          "1552-3993"
+        ],
+        "tier": "core",
+        "relevance": "Teams, diversity, leadership; IO/management bridge."
+      },
+      {
+        "name": "Industrial and Organizational Psychology: Perspectives on Science and Practice",
+        "issn": [
+          "1754-9426",
+          "1754-9434"
+        ],
+        "tier": "core",
+        "relevance": "SIOP focal-article journal; science-practice debates in IO."
+      },
+      {
+        "name": "Journal of Managerial Psychology",
+        "issn": [
+          "0268-3946",
+          "1758-7778"
+        ],
+        "tier": "core",
+        "relevance": "Applied managerial/work psychology."
+      },
+      {
+        "name": "Journal of Personnel Psychology",
+        "issn": [
+          "1866-5888",
+          "2190-5150"
+        ],
+        "tier": "adjacent",
+        "relevance": "IO journal focused on selection and assessment."
+      },
+      {
+        "name": "Occupational Health Science",
+        "issn": [
+          "2367-0134",
+          "2367-0142"
+        ],
+        "tier": "adjacent",
+        "relevance": "Occupational health and well-being science."
+      }
+    ]
   }
 ]

@@ -14,7 +14,7 @@ journals:
   disciplines:
   - Higher Education
   tier: flagship
-  works_count: 19262
+  works_count: 19263
   country: GB
   relevance: Premier US HE journal; strong pool for faculty development, organizational
     behavior in HE, and student/employee development scholarship.
@@ -24,12 +24,14 @@ journals:
   - 0021-9010
   - 1939-1854
   disciplines:
+  - Industrial-Organizational Psychology
   - Management & Organizational Behavior
   tier: flagship
   works_count: 13607
   country: US
-  relevance: Flagship for training, employee development, selection, and motivation;
-    deep bench of reviewers on workplace learning and talent.
+  relevance: 'Flagship for training, employee development, selection, and motivation;
+    deep bench of reviewers on workplace learning and talent.; Premier IO psychology
+    journal: selection, training, motivation, performance.'
 - openalex_id: S168329810
   name: Comparative Education Review
   issn:
@@ -76,11 +78,22 @@ journals:
   - Higher Education
   - International & Comparative Education
   tier: flagship
-  works_count: 4969
+  works_count: 4975
   country: NL
   relevance: Leading international HE journal; reviewers cover academic careers, organizational
     change in universities, and education-workforce policy adjacent to HRD.; Leading
     international higher-education journal; reviewers handle graduate skills, ac
+- openalex_id: S84664706
+  name: Personnel Psychology
+  issn:
+  - 0031-5826
+  - 1744-6570
+  disciplines:
+  - Industrial-Organizational Psychology
+  tier: flagship
+  works_count: 4090
+  country: GB
+  relevance: Core IO journal on selection, development, and work outcomes.
 - openalex_id: S20152851
   name: International Journal of Educational Development
   issn:
@@ -89,7 +102,7 @@ journals:
   disciplines:
   - International & Comparative Education
   tier: flagship
-  works_count: 4020
+  works_count: 4021
   country: NL
   relevance: Premier education-and-development journal; strong on skills, TVET, workforce
     development and education policy in the Global South, directly overlapping HRD-at-scale.
@@ -101,7 +114,7 @@ journals:
   disciplines:
   - Management & Organizational Behavior
   tier: flagship
-  works_count: 3704
+  works_count: 3705
   country: US
   relevance: Top HRM journal (Wiley); core reviewer pool for training, talent management,
     and HR development.
@@ -114,7 +127,7 @@ journals:
   - Higher Education
   - International & Comparative Education
   tier: flagship
-  works_count: 3659
+  works_count: 3660
   country: GB
   relevance: Field-defining HE journal; routinely publishes on academic/faculty development,
     careers, student learning, and HE workforce/policy that overlaps HRD.; Top higher-education
@@ -125,12 +138,13 @@ journals:
   - 0894-3796
   - 1099-1379
   disciplines:
+  - Industrial-Organizational Psychology
   - Management & Organizational Behavior
   tier: flagship
   works_count: 3408
   country: GB
   relevance: Leading OB journal; reviewers expert in employee development, careers,
-    engagement, and learning at work.
+    engagement, and learning at work.; Micro-OB and work behavior; heavy HRD overlap.
 - openalex_id: S122767448
   name: Journal of Management
   issn:
@@ -169,10 +183,21 @@ journals:
   disciplines:
   - Higher Education
   tier: flagship
-  works_count: 2633
+  works_count: 2634
   country: GB
   relevance: Flagship Australasian HE journal; deep coverage of academic development,
     teaching/learning, and professional learning that maps onto HRD.
+- openalex_id: S64744539
+  name: Organizational Behavior and Human Decision Processes
+  issn:
+  - 0749-5978
+  - 1095-9920
+  disciplines:
+  - Industrial-Organizational Psychology
+  tier: flagship
+  works_count: 2612
+  country: US
+  relevance: Foundational OB and decision research; strong methods.
 - openalex_id: S130619902
   name: Research in Higher Education
   issn:
@@ -195,7 +220,7 @@ journals:
   - Higher Education
   - International & Comparative Education
   tier: flagship
-  works_count: 2338
+  works_count: 2339
   country: GB
   relevance: BAICE flagship in comparative/international education; reviewers cover
     education policy, internationalization, and development with capability-building
@@ -230,6 +255,20 @@ journals:
   relevance: Leading UK comparative-education flagship; reviewers handle cross-national
     education systems, policy transfer, and skills/development themes adjacent to
     national HRD.
+- openalex_id: S152304618
+  name: The Leadership Quarterly
+  issn:
+  - 1048-9843
+  - 1873-3409
+  disciplines:
+  - Industrial-Organizational Psychology
+  - Management & Organizational Behavior
+  tier: flagship
+  works_count: 2073
+  country: NL
+  relevance: Leading leadership-science journal across psychology and management.;
+    Top leadership journal; reviewers cover leadership and leader development directly
+    relevant to HRD.
 - openalex_id: S191693275
   name: Human Resource Development Quarterly
   issn:
@@ -272,7 +311,7 @@ journals:
   - Human Resource Development
   - Management & Organizational Behavior
   tier: flagship
-  works_count: 1248
+  works_count: 1249
   country: GB
   relevance: Core outlet for adult/workplace learning; reviewers expert in informal
     learning and continuing development.; Core workplace/adult learning outlet directly
@@ -379,13 +418,14 @@ journals:
   - 1095-9084
   disciplines:
   - Career, Vocational & Workforce Development
+  - Industrial-Organizational Psychology
   - Management & Organizational Behavior
   tier: core
   works_count: 4034
   country: US
-  relevance: Flagship careers/vocational psychology; reviewers expert in career development
-    and talent.; Premier careers/vocational journal; strong reviewer pool on career
-    development, work transitions, and skills.
+  relevance: Careers, vocational development, work transitions.; Flagship careers/vocational
+    psychology; reviewers expert in career development and talent.; Premier careers/vocational
+    journal; strong reviewer pool on career development, work transitions
 - openalex_id: S64594800
   name: International Review of Education
   issn:
@@ -408,7 +448,7 @@ journals:
   disciplines:
   - Human Resource Development
   tier: core
-  works_count: 3858
+  works_count: 3859
   country: GB
   relevance: Applied corporate training and L&D outlet; practitioner-facing HRD reviewer
     base.
@@ -424,6 +464,17 @@ journals:
   country: GB
   relevance: Established UK HE journal spanning governance, careers, and organizational
     change in universities relevant to HRD.
+- openalex_id: S47864991
+  name: Applied Psychology
+  issn:
+  - 0269-994X
+  - 1464-0597
+  disciplines:
+  - Industrial-Organizational Psychology
+  tier: core
+  works_count: 3217
+  country: GB
+  relevance: International applied psychology incl. work/organizational.
 - openalex_id: S4210201494
   name: Prospects
   issn:
@@ -432,7 +483,7 @@ journals:
   disciplines:
   - International & Comparative Education
   tier: core
-  works_count: 2725
+  works_count: 2727
   country: null
   relevance: UNESCO-IBE comparative education and curriculum/policy journal; reviewers
     cover education systems and workforce-relevant policy across regions.
@@ -550,22 +601,21 @@ journals:
   disciplines:
   - Higher Education
   tier: core
-  works_count: 2135
+  works_count: 2136
   country: GB
   relevance: Central outlet for academic practice and faculty/educator development,
     directly adjacent to learning-and-development themes in HRD.
-- openalex_id: S152304618
-  name: The Leadership Quarterly
+- openalex_id: S187239619
+  name: Industrial and Organizational Psychology
   issn:
-  - 1048-9843
-  - 1873-3409
+  - 1754-9426
+  - 1754-9434
   disciplines:
-  - Management & Organizational Behavior
+  - Industrial-Organizational Psychology
   tier: core
-  works_count: 2073
-  country: NL
-  relevance: Top leadership journal; reviewers cover leadership and leader development
-    directly relevant to HRD.
+  works_count: 1967
+  country: US
+  relevance: SIOP focal-article journal; science-practice debates in IO.
 - openalex_id: S95227037
   name: Higher Education Policy
   issn:
@@ -581,6 +631,28 @@ journals:
     talent, internationalization and human-capital policy adjacent to HRD.; IAU policy
     journal; reviewers cover workforce, skills, and education-policy questions central
     to '
+- openalex_id: S53726244
+  name: Journal of Managerial Psychology
+  issn:
+  - 0268-3946
+  - 1758-7778
+  disciplines:
+  - Industrial-Organizational Psychology
+  tier: core
+  works_count: 1810
+  country: GB
+  relevance: Applied managerial/work psychology.
+- openalex_id: S61413993
+  name: Journal of Business and Psychology
+  issn:
+  - 0889-3268
+  - 1573-353X
+  disciplines:
+  - Industrial-Organizational Psychology
+  tier: core
+  works_count: 1782
+  country: US
+  relevance: Applied work psychology bridging IO and management.
 - openalex_id: S99768379
   name: Management Learning
   issn:
@@ -619,6 +691,17 @@ journals:
   relevance: Career counseling and development; reviewers for career theory and guidance
     practice.; Career development and counseling; reviewers qualified for HRD career
     and adult-transition work.
+- openalex_id: S87328381
+  name: Journal of Occupational and Organizational Psychology
+  issn:
+  - 0963-1798
+  - 2044-8325
+  disciplines:
+  - Industrial-Organizational Psychology
+  tier: core
+  works_count: 1617
+  country: GB
+  relevance: British IO/work psychology flagship.
 - openalex_id: S53132383
   name: Innovative Higher Education
   issn:
@@ -627,7 +710,7 @@ journals:
   disciplines:
   - Higher Education
   tier: core
-  works_count: 1575
+  works_count: 1576
   country: NL
   relevance: Covers innovation in teaching, faculty roles, and institutional change;
     reviewers handle organizational learning and development in HE.
@@ -639,10 +722,21 @@ journals:
   disciplines:
   - Management & Organizational Behavior
   tier: core
-  works_count: 1548
+  works_count: 1549
   country: US
   relevance: Leading journal on management learning and education; reviewers cover
     development pedagogy and capability building.
+- openalex_id: S187270080
+  name: European Journal of Work and Organizational Psychology
+  issn:
+  - 1359-432X
+  - 1464-0643
+  disciplines:
+  - Industrial-Organizational Psychology
+  tier: core
+  works_count: 1483
+  country: GB
+  relevance: European IO/work psychology flagship.
 - openalex_id: S113497174
   name: Human Resource Management Journal
   issn:
@@ -674,6 +768,17 @@ journals:
     management.; Careers, talent, and employee development; reviewers overlap heavily
     with HRD career scholarship.; Careers, talent, and employee-development research;
     r
+- openalex_id: S3481703
+  name: Journal of Occupational Health Psychology
+  issn:
+  - 1076-8998
+  - 1939-1307
+  disciplines:
+  - Industrial-Organizational Psychology
+  tier: core
+  works_count: 1391
+  country: US
+  relevance: Well-being, stress, occupational health at work.
 - openalex_id: S4210171403
   name: Journal of Vocational Education and Training
   issn:
@@ -685,7 +790,7 @@ journals:
   - Human Resource Development
   - International & Comparative Education
   tier: core
-  works_count: 1342
+  works_count: 1343
   country: GB
   relevance: Leading TVET journal; reviewers cover vocational education, skills, work
     transitions.; Leading VET/TVET journal; reviewers cover skills formation, workplace
@@ -702,6 +807,17 @@ journals:
   country: GB
   relevance: Management-focused HE journal; reviewers expert in leadership, organizational
     change, and staff development in HE institutions.
+- openalex_id: S192266589
+  name: Group & Organization Management
+  issn:
+  - 1059-6011
+  - 1552-3993
+  disciplines:
+  - Industrial-Organizational Psychology
+  tier: core
+  works_count: 1263
+  country: US
+  relevance: Teams, diversity, leadership; IO/management bridge.
 - openalex_id: S187925018
   name: Globalisation Societies and Education
   issn:
@@ -715,6 +831,17 @@ journals:
   relevance: Globalization-of-education journal; reviewers address skills regimes,
     workforce/education policy, and equity under globalization relevant to national
     HRD.
+- openalex_id: S141527467
+  name: Work & Stress
+  issn:
+  - 0267-8373
+  - 1464-5335
+  disciplines:
+  - Industrial-Organizational Psychology
+  tier: core
+  works_count: 1225
+  country: GB
+  relevance: Work stress, well-being, occupational health psychology.
 - openalex_id: S102624508
   name: The Learning Organization
   issn:
@@ -752,7 +879,7 @@ journals:
   disciplines:
   - Higher Education
   tier: core
-  works_count: 1032
+  works_count: 1033
   country: GB
   relevance: The journal of faculty/educational developers; most direct HE analogue
     to HRD's professional-development and capability-building focus.
@@ -782,7 +909,7 @@ journals:
   - Adult & Continuing Education
   - Human Resource Development
   tier: core
-  works_count: 888
+  works_count: 889
   country: GB
   relevance: Action learning in organizational and professional development; reviewers
     cover experiential adult learning and leadership development.; Action learning
@@ -813,6 +940,17 @@ journals:
   country: GB
   relevance: UK flagship for adult-education scholarship (NIACE/LERF lineage); reviewers
     cover community, popular, and workplace adult learning.
+- openalex_id: S3835251
+  name: Human Performance
+  issn:
+  - 0895-9285
+  - 1532-7043
+  disciplines:
+  - Industrial-Organizational Psychology
+  tier: core
+  works_count: 809
+  country: US
+  relevance: Individual performance, abilities, assessment.
 - openalex_id: S4210206506
   name: International Journal for Educational and Vocational Guidance
   issn:
@@ -834,7 +972,7 @@ journals:
   - Human Resource Development
   - Management & Organizational Behavior
   tier: core
-  works_count: 758
+  works_count: 760
   country: GB
   relevance: Central training-and-development journal (formerly J. of European Industrial
     Training); strong HRD overlap.; Core HRD/training journal (European base); reviewers
@@ -948,7 +1086,7 @@ journals:
   disciplines:
   - International & Comparative Education
   tier: adjacent
-  works_count: 2957
+  works_count: 2958
   country: GB
   relevance: Policy-oriented European education journal; reviewers cover lifelong
     learning, skills and education governance adjacent to HRD/workforce policy.
@@ -974,7 +1112,7 @@ journals:
   disciplines:
   - Human Resource Development
   tier: adjacent
-  works_count: 2513
+  works_count: 2514
   country: GB
   relevance: Leadership and OD; reviewers qualified for HRD leadership- and change-development
     manuscripts.
@@ -1036,7 +1174,7 @@ journals:
   - Human Resource Development
   - Management & Organizational Behavior
   tier: adjacent
-  works_count: 1143
+  works_count: 1144
   country: GB
   relevance: Core diversity/equity-in-organizations journal; reviewers fit DEI dimensions
     of HRD and workforce development.; Diversity, equity and inclusion in organizations;
@@ -1089,6 +1227,17 @@ journals:
   country: US
   relevance: Specialty learning-process journal; reviewers expert in instructional
     design and engagement transferable to training design in HRD.
+- openalex_id: S29210485
+  name: Journal of Personnel Psychology
+  issn:
+  - 1866-5888
+  - 2190-5150
+  disciplines:
+  - Industrial-Organizational Psychology
+  tier: adjacent
+  works_count: 399
+  country: DE
+  relevance: IO journal focused on selection and assessment.
 - openalex_id: S165736896
   name: Australian Journal of Adult Learning
   issn:
@@ -1100,6 +1249,17 @@ journals:
   country: null
   relevance: Australasian adult/community learning journal adding regional breadth;
     reviewers in adult education, ACE, and workplace learning.
+- openalex_id: S4210173744
+  name: Occupational Health Science
+  issn:
+  - 2367-0134
+  - 2367-0142
+  disciplines:
+  - Industrial-Organizational Psychology
+  tier: adjacent
+  works_count: 264
+  country: CH
+  relevance: Occupational health and well-being science.
 - openalex_id: S3035624105
   name: Empirical research in vocational education and training
   issn:
