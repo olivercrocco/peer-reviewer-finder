@@ -1,5 +1,7 @@
 # peer-reviewer-finder
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20448662.svg)](https://doi.org/10.5281/zenodo.20448662)
+
 Find well-matched, conflict-free, and diverse peer reviewers for a manuscript in
 **human resource development and adjacent fields**, using
 [OpenAlex](https://openalex.org). Built for journal editors in HRD, adult and

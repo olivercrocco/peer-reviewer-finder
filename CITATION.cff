@@ -15,6 +15,7 @@ authors:
 license: MIT
 repository-code: "https://github.com/olivercrocco/peer-reviewer-finder"
 url: "https://github.com/olivercrocco/peer-reviewer-finder"
+doi: 10.5281/zenodo.20448662
 version: "0.1.0"
 date-released: "2026-05-29"
 keywords:
