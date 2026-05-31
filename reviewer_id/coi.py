@@ -120,6 +120,16 @@ def disciplines_of(cand):
     return out
 
 
+_ORCID_RE = re.compile(r"^(?:https?://orcid\.org/)?(\d{4}-\d{4}-\d{4}-\d{3}[\dX])$")
+
+
+def _valid_orcid(s):
+    """Return the bare ORCID id if `s` is a valid ORCID (bare or orcid.org URL),
+    else None — so a malformed/hostile value isn't interpolated into a query."""
+    m = _ORCID_RE.match((s or "").strip())
+    return m.group(1) if m else None
+
+
 def resolve_coauthors(client, orcids, since_year=None, max_works=200):
     """Given submitting-author ORCID iDs (NOT names), return
     (author_openalex_ids, recent_coauthor_ids) so both the authors themselves and
@@ -127,7 +137,10 @@ def resolve_coauthors(client, orcids, since_year=None, max_works=200):
     OpenAlex (not the manuscript) — it is opt-in in confidential mode."""
     author_ids, coauthor_ids = set(), set()
     for orcid in orcids or []:
-        a = client.get(f"authors/orcid:{orcid.strip()}")
+        oid = _valid_orcid(orcid)
+        if not oid:
+            continue   # skip a malformed ORCID rather than shaping a request from it
+        a = client.get(f"authors/orcid:{oid}")
         aid = (a.get("id") or "").split("/")[-1]
         if not aid:
             continue
