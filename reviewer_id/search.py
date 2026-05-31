@@ -78,11 +78,14 @@ def find_submission(client, title):
     for w in data.get("results", []):
         wt = set(re.split(r"\W+", (w.get("title") or "").lower()))
         if len(qt & wt) / max(len(qt), 1) > 0.6:
+            authors = []
+            for au in w.get("authorships", []):
+                a = au.get("author") or {}
+                if a.get("id"):
+                    authors.append((a["id"].split("/")[-1], a.get("display_name")))
             return {
-                "id": w["id"], "title": w.get("title"),
+                "id": w.get("id"), "title": w.get("title"),
                 "year": w.get("publication_year"),
-                "authors": [(au["author"]["id"].split("/")[-1],
-                             au["author"]["display_name"])
-                            for au in w.get("authorships", [])],
+                "authors": authors,
             }
     return None

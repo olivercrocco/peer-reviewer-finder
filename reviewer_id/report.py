@@ -5,6 +5,7 @@ there so the editor can pick alternates and audit the matches.
 
 import csv
 import json
+import re
 from pathlib import Path
 
 from .coi import current_affiliation, disciplines_of
@@ -44,8 +45,16 @@ def _evidence(cand, limit=5):
     return works[:limit]
 
 
+def _safe_slug(slug):
+    """Sanitize a spec-supplied slug so output filenames can't escape outdir:
+    drop any path components and reduce to [A-Za-z0-9._-]."""
+    s = re.sub(r"[^A-Za-z0-9._-]", "_", Path(str(slug or "")).name).strip("._")
+    return s or "output"
+
+
 def write_all(result, outdir, slug):
     outdir = Path(outdir)
+    slug = _safe_slug(slug)
     outdir.mkdir(parents=True, exist_ok=True)
     spec, rows, panel, found = (result["spec"], result["rows"],
                                 result["panel"], result["found"])

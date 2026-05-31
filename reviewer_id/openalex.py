@@ -6,10 +6,19 @@ Set it via the REVIEWER_ID_EMAIL environment variable or pass `email=`.
 """
 
 import os
+import re
 import time
+from urllib.parse import urlparse
+
 import requests
 
 BASE = "https://api.openalex.org"
+
+_ISSN_RE = re.compile(r"^\d{4}-\d{3}[\dX]$")
+
+
+def _valid_issn(s):
+    return bool(_ISSN_RE.match((s or "").strip()))
 
 
 class OpenAlex:
@@ -30,7 +39,14 @@ class OpenAlex:
         params = dict(params or {})
         if self.email:
             params["mailto"] = self.email
-        url = path if path.startswith("http") else f"{BASE}/{path.lstrip('/')}"
+        if path.startswith("http"):
+            # Pin absolute URLs to the OpenAlex host so a data-influenced value
+            # (e.g. a forwarded cursor URL) can't redirect the request elsewhere.
+            if urlparse(path).netloc != urlparse(BASE).netloc:
+                raise ValueError(f"refusing to fetch a non-OpenAlex URL: {path}")
+            url = path
+        else:
+            url = f"{BASE}/{path.lstrip('/')}"
         for attempt in range(self.tries):
             try:
                 r = self.session.get(url, params=params, timeout=self.timeout)
@@ -52,7 +68,9 @@ class OpenAlex:
         back to a name search and pick the best 'journal'-type match. Returns a
         dict {id, display_name, issn, works_count} or None."""
         for issn in (issns or []):
-            data = self.get(f"sources/issn:{issn}")
+            if not _valid_issn(issn):
+                continue
+            data = self.get(f"sources/issn:{issn.strip()}")
             if data and data.get("id"):
                 return self._source_fields(data)
         if name:
