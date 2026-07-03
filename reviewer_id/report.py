@@ -7,6 +7,7 @@ import csv
 import json
 import re
 from pathlib import Path
+from urllib.parse import quote_plus
 
 from .coi import current_affiliation, disciplines_of
 from .score import career_stage, is_active
@@ -14,6 +15,43 @@ from .score import career_stage, is_active
 
 def _disciplines_matched(cand):
     return disciplines_of(cand)
+
+
+def _contact_record(cand, result):
+    """Build a paste-ready contact record for a reviewer, merging what we already
+    know (OpenAlex affiliation, ORCID iD) with any public ORCID enrichment, and
+    always providing ready-made lookup URLs for whatever's still missing.
+
+    Nothing here transmits anything: the ORCID data was fetched earlier (only if
+    --contacts was set); the search URLs are just strings the editor can click.
+    """
+    aff_oa, ctry_oa = current_affiliation(cand)
+    c = (result.get("contacts") or {}).get(cand.id) or {}
+
+    email = c.get("email") or ""
+    # ORCID's current employer is usually fresher than OpenAlex's last-known one.
+    affiliation = c.get("affiliation") or aff_oa or ""
+    aff_source = "ORCID" if c.get("affiliation") else ("OpenAlex" if aff_oa else "")
+    country = c.get("country") or ctry_oa or ""
+    role = c.get("role") or ""
+
+    orcid_bare = c.get("orcid") or ((cand.orcid or "").rstrip("/").split("/")[-1] if cand.orcid else "")
+    orcid_url = f"https://orcid.org/{orcid_bare}" if orcid_bare else ""
+    openalex_url = f"https://openalex.org/{cand.id}"
+
+    name = cand.name or ""
+    q = f'"{name}" {affiliation} email'.strip()
+    google_url = f"https://www.google.com/search?q={quote_plus(q)}"
+    scholar_url = f"https://scholar.google.com/scholar?q={quote_plus(name)}"
+
+    return {
+        "name": name, "email": email,
+        "email_source": ("ORCID public" if email else ""),
+        "affiliation": affiliation, "affiliation_source": aff_source,
+        "role": role, "country": country,
+        "orcid": orcid_url, "openalex": openalex_url,
+        "google_search": google_url, "scholar_search": scholar_url,
+    }
 
 
 def _scorecard_line(result):
@@ -31,7 +69,7 @@ def _scorecard_line(result):
     order = [("size", "size"), ("institutions", "institutions"),
              ("countries", "countries"), ("disciplines", "disciplines"),
              ("method_experts", "method experts"), ("early_career", "early-career"),
-             ("senior", "senior")]
+             ("mid_career", "mid-career"), ("senior", "senior")]
     parts = [fmt(k, l) for k, l in order]
     return " · ".join(p for p in parts if p), [
         l for k, l in order if (v := sc.get(k)) and v[1] is not None and v[0] < v[1]]
@@ -62,11 +100,13 @@ def write_all(result, outdir, slug):
     _write_panel(outdir / f"{slug}_panel.md", result)
     _write_report(outdir / f"{slug}_reviewers.md", result)
     _write_csv(outdir / f"{slug}_candidates.csv", result)
+    _write_contacts(outdir / f"{slug}_contacts.csv", result)
     _write_raw(outdir / f"{slug}_raw.json", result)
     return {
         "panel": outdir / f"{slug}_panel.md",
         "report": outdir / f"{slug}_reviewers.md",
         "csv": outdir / f"{slug}_candidates.csv",
+        "contacts": outdir / f"{slug}_contacts.csv",
         "raw": outdir / f"{slug}_raw.json",
     }
 
@@ -125,15 +165,18 @@ def _write_panel(path, result):
         md.append(f"> ⚠️ Couldn't fully fill from the pool: **{', '.join(unmet)}**. "
                   f"Widen disciplines, raise `--top`, or relax the target in the spec's `panel` block.\n")
     md += ["\n## Recommended panel\n",
-           "| # | Reviewer | Role | Stage | Institution | Country | In panel because |",
-           "|---|---|---|---|---|---|---|"]
+           "| # | Reviewer | Role | Stage | Institution | Country | Email | In panel because |",
+           "|---|---|---|---|---|---|---|---|"]
     for i, (cand, sc, kind, why) in enumerate(panel := result["panel"], 1):
-        aff, ctry = current_affiliation(cand)
+        rec = _contact_record(cand, result)
         stage = career_stage(cand.prof, cy)
-        md.append(f"| {i} | **{cand.name}** | {kind} | {stage} | {aff or '—'} | {ctry or '—'} | {why} |")
+        email_cell = rec["email"] or f"[look up]({rec['google_search']})"
+        md.append(f"| {i} | **{cand.name}** | {kind} | {stage} | "
+                  f"{rec['affiliation'] or '—'} | {rec['country'] or '—'} | {email_cell} | {why} |")
     md.append("\n*Details for each panel member:*\n")
     for i, (cand, sc, kind, why) in enumerate(panel, 1):
-        aff, ctry = current_affiliation(cand)
+        rec = _contact_record(cand, result)
+        aff, ctry = rec["affiliation"], rec["country"]
         stage = career_stage(cand.prof, cy)
         active = "" if is_active(cand.prof, cy) else "  ⚠ no publications in ~3 years"
         links = [f"[OpenAlex](https://openalex.org/{cand.id})"]
@@ -141,6 +184,15 @@ def _write_panel(path, result):
             links.append(f"[ORCID]({cand.orcid})")
         md.append(f"\n**{i}. {cand.name}** — {aff or '—'}{f' ({ctry})' if ctry else ''} · "
                   f"{kind} · {stage} · score {sc['score']} · " + " · ".join(links))
+        if rec["email"]:
+            contact = f"  - **Email:** {rec['email']} (public ORCID)"
+            if rec["role"]:
+                contact += f" · {rec['role']}"
+            md.append(contact)
+        else:
+            md.append(f"  - **Email:** not public in ORCID — "
+                      f"[Google]({rec['google_search']}) · [Scholar]({rec['scholar_search']})"
+                      + (f" · {rec['role']}" if rec["role"] else ""))
         p = cand.prof or {}
         md.append(f"  - h-index {p.get('h_index','?')}, {p.get('works_count','?')} works"
                   f"{active}")
@@ -154,8 +206,18 @@ def _write_panel(path, result):
     md.append("\n## Conflicts & independence\n")
     _coi_block(result, md)
     md.append("\n## Notes\n")
+    if result.get("contacts_enabled"):
+        md.append("- **Emails** shown are the reviewer's own *public* ORCID email; most "
+                  "researchers keep it private, so blanks are expected. For those, use the "
+                  "ready-made search links here and in `*_contacts.csv`.")
+    else:
+        md.append("- **Emails** were not looked up (run with `--contacts` to pull public "
+                  "ORCID emails + current employers). The `*_contacts.csv` sheet still lists "
+                  "each reviewer with ready-made search links to find an address quickly.")
     md.append("- Verify each invitee's **current affiliation and email** before inviting; "
-              "OpenAlex's last-known institution can lag.")
+              "OpenAlex's last-known institution can lag and public emails may be dated.")
+    md.append("- A paste-ready **`*_contacts.csv`** holds name, email, affiliation, country, "
+              "ORCID/OpenAlex links, and search URLs for the Manuscript Central invite.")
     md.append("- Pick alternates from the full ranked list in the companion "
               "`*_reviewers.md` / `*_candidates.csv`.")
     Path(path).write_text("\n".join(md))
@@ -219,6 +281,28 @@ def _write_csv(path, result):
                          p.get("h_index"), cand.orcid or "",
                          f"https://openalex.org/{cand.id}",
                          "; ".join(p.get("topics") or []), ev])
+
+
+def _write_contacts(path, result):
+    """A paste-ready contact worksheet for the suggested panel — the fastest path
+    from a shortlist to Manuscript Central invitations. One row per panel member:
+    email (public ORCID, when available), current affiliation + role, country,
+    ORCID/OpenAlex links, and ready-made Google/Scholar search URLs for any gaps.
+    Ordered to match the panel (best fit first).
+    """
+    cy = result.get("current_year", 2026)
+    with Path(path).open("w", newline="") as f:
+        wr = csv.writer(f)
+        wr.writerow(["panel_rank", "name", "career_stage", "email", "email_source",
+                     "affiliation", "affiliation_source", "role", "country",
+                     "orcid", "openalex", "google_search", "scholar_search"])
+        for i, (cand, sc, kind, why) in enumerate(result["panel"], 1):
+            rec = _contact_record(cand, result)
+            wr.writerow([i, rec["name"], career_stage(cand.prof, cy),
+                         rec["email"], rec["email_source"],
+                         rec["affiliation"], rec["affiliation_source"], rec["role"],
+                         rec["country"], rec["orcid"], rec["openalex"],
+                         rec["google_search"], rec["scholar_search"]])
 
 
 def _write_raw(path, result):

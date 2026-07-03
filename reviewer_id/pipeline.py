@@ -62,7 +62,8 @@ def _fold(matches, term, bucket, id_meta, candidates):
 
 def run(spec, client, registry, *, top=25, panel_size=None, per_query=100,
         enrich_top=150, current_year=2026, confidential=True,
-        ledger_path=None, ledger_cooldown=12, ledger_as_of=None, log=print):
+        ledger_path=None, ledger_cooldown=12, ledger_as_of=None,
+        contacts=False, log=print):
     # 1. terms by tier
     query_bucket = {}
     for tier in TIERS:
@@ -178,11 +179,30 @@ def run(spec, client, registry, *, top=25, panel_size=None, per_query=100,
     # the scorecard CHOOSES a diverse, covered set; display it ordered by best fit
     panel.sort(key=lambda t: t[1]["score"], reverse=True)
 
+    # 8. optional contact enrichment (opt-in). Query the PUBLIC ORCID API for the
+    # panel members' own public email + current employer. Sends only the reviewers'
+    # public ORCID iDs to pub.orcid.org — never manuscript text or author identities.
+    panel_contacts = {}
+    if contacts:
+        from .coi import _valid_orcid
+        from .orcid import fetch_contacts
+        panel_orcids = [c.orcid for c, *_ in panel if c.orcid]
+        n_missing = len(panel) - len(panel_orcids)
+        log(f"Contact lookup (ORCID): {len(panel_orcids)} of {len(panel)} panel member(s) "
+            f"have an ORCID iD"
+            + (f"; {n_missing} do not (use the search links in the contacts sheet)." if n_missing else "."))
+        raw = fetch_contacts(panel_orcids, log=log)
+        for c, *_ in panel:
+            oid = _valid_orcid(c.orcid) if c.orcid else None
+            if oid and oid in raw:
+                panel_contacts[c.id] = {**raw[oid], "orcid": oid}
+
     return {
         "spec": spec, "rows": rows[:top], "all_rows": rows, "panel": panel,
         "scorecard": scorecard, "panel_reqs": reqs,
         "found": found, "coauthors": graph, "confidential": confidential,
         "current_year": current_year, "coauthor_coi": coauthor_coi,
+        "contacts": panel_contacts, "contacts_enabled": contacts,
         "author_inst_ids": author_inst_ids,
         "n_candidates": len(candidates), "n_journals": len(source_ids),
         "same_inst_blocked": same_inst_blocked,

@@ -25,11 +25,32 @@ authors, and IT/security reviewers can verify it.
 | Your **tiered topic terms** (e.g. "team learning") | Yes — these drive the search |
 | Submitting authors' **institution names** | **Only in standard mode.** Confidential mode matches them locally. |
 | Submitting authors' **ORCID iDs** (co-author screening) | **Only if you opt in** (`screen_coauthors` / `--screen-coauthors`) — transmits the ORCID, not the manuscript |
+| **Recommended reviewers'** public ORCID iDs (contact lookup) | **Only if you opt in** (`--contacts`) — sent to `pub.orcid.org` to fetch their public email/employer; never the manuscript or submitting authors |
 | Your **email** | Only if you set one and are in standard mode (OpenAlex "polite pool") |
 | Anything sent to an **AI/LLM** | **Never** |
 
 OpenAlex is operated by [OurResearch](https://ourresearch.org), a US nonprofit.
 Its API receives query parameters as part of normal HTTP requests.
+
+## Reviewer contact lookup (`--contacts`, opt-in)
+
+Inviting a reviewer needs an email and affiliation. With `--contacts`, the tool
+queries the **public ORCID API** (`pub.orcid.org`) for each member of the suggested
+panel to fill in a public email (when the researcher chose to publish one) and their
+current employer. This is off by default. When on:
+
+- it sends **only the candidate reviewers' own public ORCID iDs** — public
+  identifiers, not manuscript-derived data. The manuscript title, abstract, your
+  topic terms, the submitting authors, and your email are **not** sent to ORCID;
+- it runs **only for the small recommended panel**, not the whole candidate pool;
+- the ORCID client is **host-pinned** to `pub.orcid.org`, with timeouts and TLS
+  verification, exactly like the OpenAlex client;
+- it is compatible with confidential mode (it concerns reviewers, not your authors).
+
+The `<slug>_contacts.csv` worksheet is written whether or not `--contacts` is set;
+without it, the email column is blank and only locally-built search links are
+provided (no network). ORCID is operated by a US nonprofit; its public API returns
+only data each researcher has chosen to make public.
 
 ## Confidential mode (default: ON)
 

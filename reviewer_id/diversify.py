@@ -27,6 +27,8 @@ def select_panel(ranked, coauthors, reqs, current_year=2026):
     min_c, min_d = reqs["min_countries"], reqs["min_disciplines"]
     min_m, min_e, min_s = (reqs["min_method_experts"],
                            reqs["min_early_career"], reqs["min_senior"])
+    min_mid = reqs.get("min_mid_career", 0)
+    max_s = reqs.get("max_senior")            # None => no cap on senior scholars
 
     items = [{
         "cand": c, "sc": sc, "kind": kind,
@@ -39,7 +41,7 @@ def select_panel(ranked, coauthors, reqs, current_year=2026):
     chosen = []
     inst_counts = defaultdict(int)
     countries, disciplines, picked_ids = set(), set(), set()
-    n_method = n_early = n_senior = 0
+    n_method = n_early = n_mid = n_senior = 0
 
     while len(chosen) < size and items:
         best, best_val, best_idx = None, None, None
@@ -48,12 +50,17 @@ def select_panel(ranked, coauthors, reqs, current_year=2026):
                 continue
             if picked_ids & coauthors.get(it["cand"].id, set()):
                 continue
+            # hard cap on senior scholars so they can't fill the deeper bench
+            if max_s is not None and it["stage"] == "senior" and n_senior >= max_s:
+                continue
             val = it["sc"]["score"]
             new_country = bool(it["country"]) and it["country"] not in countries
             new_discs = it["discs"] - disciplines
             if it["method"] and n_method < min_m:
                 val += W_REQ + (W_REQ * 0.4 if it["primary_method"] else 0.0)
             if it["stage"] == "early-career" and n_early < min_e:
+                val += W_REQ
+            if it["stage"] == "mid-career" and n_mid < min_mid:
                 val += W_REQ
             if it["stage"] == "senior" and n_senior < min_s:
                 val += W_REQ
@@ -75,6 +82,8 @@ def select_panel(ranked, coauthors, reqs, current_year=2026):
             why.append("method" + (" (primary)" if it["primary_method"] else ""))
         if it["stage"] == "early-career" and n_early < min_e:
             why.append("early-career")
+        if it["stage"] == "mid-career" and n_mid < min_mid:
+            why.append("mid-career")
         if it["stage"] == "senior" and n_senior < min_s:
             why.append("senior anchor")
         if it["country"] and it["country"] not in countries:
@@ -90,6 +99,7 @@ def select_panel(ranked, coauthors, reqs, current_year=2026):
         picked_ids.add(it["cand"].id)
         n_method += int(it["method"])
         n_early += int(it["stage"] == "early-career")
+        n_mid += int(it["stage"] == "mid-career")
         n_senior += int(it["stage"] == "senior")
         items.pop(best_idx)
 
@@ -100,6 +110,7 @@ def select_panel(ranked, coauthors, reqs, current_year=2026):
         "disciplines": (len(disciplines), min_d),
         "method_experts": (n_method, min_m),
         "early_career": (n_early, min_e),
+        "mid_career": (n_mid, min_mid),
         "senior": (n_senior, min_s),
     }
     return chosen, scorecard

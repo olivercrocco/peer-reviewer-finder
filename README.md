@@ -71,10 +71,12 @@ Outputs land in `output/<slug>_*`:
 | `<slug>_panel.md` | **the deliverable** — suggested diverse panel + COI summary |
 | `<slug>_reviewers.md` | full ranked report with evidence per candidate |
 | `<slug>_candidates.csv` | every scored candidate; re-sort in a spreadsheet |
+| `<slug>_contacts.csv` | paste-ready invite worksheet for the panel: email, affiliation, links |
 | `<slug>_raw.json` | matched works + per-term match strength (audit trail) |
 
 Useful flags: `--disciplines "Human Resource Development,Higher Education"` to
-narrow the pool, `--panel 5`, `--top 30`, `--list-disciplines`.
+narrow the pool, `--panel 5`, `--top 30`, `--contacts` (look up panel emails, see
+below), `--list-disciplines`.
 
 ## The article spec
 
@@ -103,7 +105,8 @@ The only real work is **tiering the keywords** — this is what makes the matchi
   "panel": {                      // optional scorecard the suggested panel tries to satisfy
     "size": 9, "max_per_institution": 1, "min_countries": 4,
     "min_disciplines": 2, "min_method_experts": 1,
-    "min_early_career": 1, "min_senior": 1
+    "min_early_career": 2, "min_mid_career": 2,   // aim for a real career-stage spread
+    "min_senior": 1, "max_senior": 3              // one anchor; cap seniors so they don't crowd out the bench
   }
 }
 ```
@@ -113,10 +116,19 @@ The only real work is **tiering the keywords** — this is what makes the matchi
 A good panel is a set of boxes, not just the top-N by score. The `panel` block
 declares targets — institution and country spread, **disciplinary** spread (uses the
 cross-discipline pool), **method-expertise** coverage (matched to the manuscript's
-own method), and a **senior / early-career** mix (via an h-index + output proxy). The
-selector fills unmet boxes first, then takes the best remaining candidates, and the
-report shows a scorecard (`✓ countries 6/4 · ✓ method experts 2/1 · …`). Boxes that
-can't be filled from the pool are flagged, not hidden.
+own method), and a **career-stage mix**. The selector fills unmet boxes first, then
+takes the best remaining candidates, and the report shows a scorecard
+(`✓ countries 6/4 · ✓ early-career 3/1 · ✓ mid-career 2/2 · ✓ senior 2/1 · …`). Boxes
+that can't be filled from the pool are flagged, not hidden.
+
+**Career-stage balance.** The defaults deliberately steer away from an all-senior
+panel: they target early-career and mid-career reviewers and cap how many senior
+scholars can be included (`max_senior`), so the deeper bench skews toward the people
+who are under-tapped and still building service records. Career stage is estimated
+from **academic age** (years since first publication, from OpenAlex `counts_by_year`)
+refined by h-index, rather than from lifetime output alone, which over-counts seniors.
+It is a heuristic; when `--contacts` is on, each panel member's ORCID job title is
+shown alongside it as a cross-check. Tune the targets in the spec's `panel` block.
 
 The proposed set defaults to **9 reviewers, ranked by best fit** — a deeper bench,
 since invitation response rates are low and some candidates may be over-tapped.
@@ -132,6 +144,53 @@ down and becomes eligible again after `--ledger-cooldown` months (default 12);
 `status` of `declined`/`blocked` skips permanently. It's auto-used if the file
 exists; `--no-ledger` ignores it. Entirely local and confidential — matched on your
 machine, never transmitted.
+
+## Reviewer contacts (emails & affiliations)
+
+To invite reviewers in a system like ScholarOne / Manuscript Central you need an
+email and an affiliation. OpenAlex gives affiliations (the tool already prefers the
+most-recent matched-work institution) but deliberately omits emails. Two things help:
+
+- **`<slug>_contacts.csv`** is always written: one row per panel member with name,
+  career stage, affiliation, country, ORCID/OpenAlex links, and ready-made
+  **Google and Google Scholar search URLs** so finding an address is one click. The
+  search URLs are just text built locally from public names; nothing is transmitted.
+- **`--contacts`** additionally queries the **public [ORCID](https://orcid.org) API**
+  for each panel member and fills in (a) their **public email**, if they chose to
+  publish one, and (b) their **current employer and job title**, which is often
+  fresher than OpenAlex's last-known institution. Most researchers keep their ORCID
+  email private, so expect blanks; the search links cover the rest.
+
+```bash
+python -m reviewer_id --article articles/my_submission.json --contacts
+```
+
+Confidentiality: `--contacts` sends only the panel members' own **public ORCID iDs**
+to `pub.orcid.org` (host-pinned, like the OpenAlex client) — never the manuscript,
+the submitting authors, or your email. It runs only for the small suggested panel.
+See [CONFIDENTIALITY.md](CONFIDENTIALITY.md). Always verify an address before
+inviting; public emails can be dated.
+
+### Filling the remaining emails (`gapfill_contacts.py`)
+
+ORCID publishes only the minority of emails researchers chose to make public. To
+complete the sheet **without** adding web-scraping to the confidential pipeline, a
+companion script brackets an assisted lookup with two network-free steps:
+
+```bash
+python gapfill_contacts.py prepare output/<slug>_contacts.csv
+#   -> <slug>_gapfill_worklist.json: the panel members still missing an email,
+#      each with affiliation, ORCID/OpenAlex links, and ready-made search URLs.
+#   ... fill in each email from a real public source (do not pattern-guess) ...
+python gapfill_contacts.py merge output/<slug>_contacts.csv <slug>_gapfill_worklist.json
+#   -> <slug>_contacts_completed.csv: emails + source + confidence, ready to invite.
+```
+
+The lookup in the middle is yours: work the worklist's search links by hand, or hand
+it to an AI assistant with web access. Searching a reviewer's public name and
+institution never touches the manuscript, so it stays confidentiality-safe. The
+script itself makes no network calls; it only prepares the worklist and merges the
+results (it also accepts the raw JSON such an assistant returns).
 
 ## How matching works (and why it's trustworthy)
 
@@ -154,8 +213,11 @@ machine, never transmitted.
    **over-use ledger** (recently invited, declined, ineligible) are dropped too.
 7. **Diversify against the scorecard** — greedily select a panel that maximizes
    relevance while filling the `panel` targets (institution/country/discipline spread,
-   method coverage, senior/early-career mix) and never pairing two people who
-   co-authored a matched work. Unfilled boxes are reported.
+   method coverage, and a balanced early/mid/senior career-stage mix with a senior
+   cap) and never pairing two people who co-authored a matched work. Unfilled boxes
+   are reported.
+8. **(Optional) Enrich the panel's contacts** — with `--contacts`, look up each panel
+   member's public ORCID email and current employer to speed up invitations.
 
 ## The journal registry
 

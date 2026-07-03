@@ -17,9 +17,11 @@ and country-diverse panel plus alternates.
 ## Architecture
 
 - `reviewer_id/` — the package: `cli.py` (entry + orchestration), `openalex.py` (thin REST
-  client + entity resolvers), `search.py` (term search + submission lookup), `coi.py`
-  (conflict screening), `score.py`, `report.py` (writes panel / report / CSV / raw outputs),
-  `config.py`.
+  client + entity resolvers), `orcid.py` (host-pinned public-ORCID client for opt-in contact
+  lookup), `search.py` (term search + submission lookup), `coi.py` (conflict screening),
+  `score.py` (relevance scoring + academic-age career-stage proxy), `diversify.py`
+  (scorecard-driven panel selection), `report.py` (writes panel / report / candidates CSV /
+  contacts CSV / raw outputs), `config.py`.
 - `find_reviewers.py` — thin entrypoint (identical to `python -m reviewer_id`).
 - The journal registry (YAML) is the searchable journal set.
 
@@ -34,9 +36,11 @@ python -m pytest                  # includes tests/test_hardening.py
 
 - **Confidential by design:** confidential mode (the default) sends OpenAlex only generic
   topic keywords — never the title, abstract, author identities, or email. Never weaken this.
-- **Local only:** no network beyond the OpenAlex public API; no AI/LLM; no telemetry. HTTP is
-  host-pinned to `api.openalex.org` with timeouts and default TLS verification — keep it
-  pinned (see `OpenAlex.get`).
+- **Local only:** no AI/LLM; no telemetry. The only network calls are to the OpenAlex public
+  API and, when `--contacts` is opt-in, the public ORCID API (`pub.orcid.org`) for the panel's
+  own public email + current employer. Both clients are host-pinned with timeouts and default
+  TLS verification — keep them pinned (see `OpenAlex.get` / `ORCID.get`). Contact lookup sends
+  only reviewers' public ORCID iDs, never manuscript text or author identities.
 - **No secrets / no PII committed:** `articles/*`, `output/`, and the reviewer ledger are
   git-ignored; only `*.template.*` / `example.*` are tracked.
 - **Input hygiene:** validate spec-supplied values before interpolating them into queries

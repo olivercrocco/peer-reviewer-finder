@@ -43,6 +43,12 @@ def main(argv=None):
     ap.add_argument("--no-ledger", action="store_true", help="Ignore the over-use ledger.")
     ap.add_argument("--ledger-cooldown", type=int, default=12,
                     help="Months a dated ledger entry stays excluded before becoming eligible again.")
+    ap.add_argument("--contacts", action=argparse.BooleanOptionalAction, default=None,
+                    help="Look up the suggested panel's PUBLIC contact info via the ORCID API "
+                         "(public email when the researcher published one + current employer). "
+                         "Opt-in: sends only the reviewers' public ORCID iDs to pub.orcid.org, "
+                         "never manuscript text or author identities. A paste-ready "
+                         "<slug>_contacts.csv (with search links for any gaps) is written either way.")
     ap.add_argument("--list-disciplines", action="store_true", help="Print the registry's disciplines and exit.")
     args = ap.parse_args(argv)
 
@@ -80,12 +86,15 @@ def main(argv=None):
         ledger_path = None
     cooldown = spec.get("ledger_cooldown_months", args.ledger_cooldown)
 
+    # contact lookup: CLI flag > spec field > default (off)
+    contacts = args.contacts if args.contacts is not None else bool(spec.get("contacts", False))
+
     # confidential mode sends no mailto (email="" suppresses it); otherwise use --email/env
     client = OpenAlex(email="" if confidential else args.email)
     result = run(spec, client, registry, top=args.top, panel_size=args.panel,
                  per_query=args.per_query, enrich_top=args.enrich_top,
                  current_year=args.current_year, confidential=confidential,
-                 ledger_path=ledger_path, ledger_cooldown=cooldown)
+                 ledger_path=ledger_path, ledger_cooldown=cooldown, contacts=contacts)
 
     slug = spec.get("slug") or Path(args.article).stem
     paths = write_all(result, args.out, slug)

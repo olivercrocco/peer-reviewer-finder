@@ -22,14 +22,22 @@ LEDGER_PATH = REPO_ROOT / "reviewer-ledger.csv"
 # be filled from the pool, the report says so rather than failing.
 # Size defaults to 9: reviewer-invitation response rates are low and some candidates
 # may be over-invited / ineligible, so the editor needs a deeper bench in reserve.
+#
+# Career-stage mix: the targets below aim for a genuine spread rather than a panel of
+# senior scholars. For a panel of 9 the mins guarantee 2 early-career + 2 mid-career +
+# 1 senior anchor, and `max_senior` caps how many senior scholars can fill the rest —
+# so the deeper bench skews toward the early- and mid-career reviewers who are
+# under-tapped and building their service records.
 PANEL_DEFAULTS = {
     "size": 9,
     "max_per_institution": 1,   # independence: at most N reviewers per institution
     "min_countries": 4,         # geographic spread
     "min_disciplines": 2,       # disciplinary spread (uses the cross-discipline pool)
     "min_method_experts": 1,    # expertise in the manuscript's method(s)
-    "min_early_career": 1,      # cultivate early-career reviewers
+    "min_early_career": 2,      # cultivate early-career reviewers (was 1)
+    "min_mid_career": 2,        # ensure a mid-career core, not just juniors + seniors
     "min_senior": 1,            # at least one senior anchor
+    "max_senior": 3,            # cap seniors so they can't crowd out the panel
 }
 
 # Used only if journals.yaml is missing, so the package is runnable out of the box.

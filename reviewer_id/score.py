@@ -67,12 +67,16 @@ def score(cand, weights=TIER_WEIGHT, current_year=2026):
     recency_bonus = 2 if (recency and recency >= current_year - 3) else (
         1 if (recency and recency >= current_year - 6) else 0)
     wc = (cand.prof or {}).get("works_count") or 0
-    seniority = 1.5 if wc >= 15 else (1.0 if wc >= 6 else (0.5 if wc >= 3 else 0.0))
+    # A small, FLAT credibility floor: it distinguishes an established scholar from a
+    # one-off author but does not escalate with output. Raw productivity is a
+    # seniority proxy, and the old escalating bonus (up to +1.5 for >=15 works) put a
+    # thumb on the scale for senior scholars. Fit, not volume, should rank a reviewer.
+    track_record = 0.6 if wc >= 5 else (0.3 if wc >= 2 else 0.0)
 
     total = (core_c + sec_c + method_c + ctx_c
              - 0.5 * overflow
              + 1.0 * len(breadth["core"])
-             + recency_bonus + seniority)
+             + recency_bonus + track_record)
 
     return {
         "score": round(total, 2),
@@ -104,12 +108,47 @@ def classify(sc):
     return "Adjacent"
 
 
+def academic_age(prof, current_year=2026):
+    """Years since the author's first recorded publication, from OpenAlex
+    `counts_by_year` (no extra API call). Returns None if there's no year data.
+
+    counts_by_year reaches back ~20 years, deep enough to place early- and
+    mid-career scholars precisely; for long careers it saturates near the window
+    edge, which still reads as 'senior' and is fine for this purpose.
+    """
+    cby = (prof or {}).get("counts_by_year") or []
+    years = [c.get("year") for c in cby
+             if c.get("year") and (c.get("works_count") or 0) > 0]
+    return max(0, current_year - min(years)) if years else None
+
+
 def career_stage(prof, current_year=2026):
-    """Coarse career-stage proxy from h-index + output (no extra API calls).
-    Returns 'senior' | 'mid-career' | 'early-career'. Heuristic, not authoritative."""
-    h = (prof or {}).get("h_index") or 0
-    wc = (prof or {}).get("works_count") or 0
-    if h >= 25 or wc >= 100:
+    """Career-stage proxy. PRIMARY axis is academic age (years since first
+    publication); h-index only refines the edges. Career stage means time in the
+    field, not lifetime output — keying off productivity alone (the old rule)
+    mislabels prolific-but-recent scholars 'senior' and rarely finds early-career
+    reviewers. Returns 'senior' | 'mid-career' | 'early-career'. Heuristic.
+    """
+    p = prof or {}
+    h = p.get("h_index") or 0
+    wc = p.get("works_count") or 0
+    age = academic_age(p, current_year)
+
+    if age is not None:
+        if age <= 7 and h < 20:              # first ~7 years, absent an unusual h-index
+            return "early-career"
+        # Senior means a long career AND an established citation record (or a standout
+        # record regardless of years). Age alone isn't enough: a first publication 16+
+        # years ago is often a doctoral paper, and a modest h-index at that age reads as
+        # steady mid-career, not senior. Gating on h also keeps the senior count from
+        # re-inflating, which is the whole point of the rebalance.
+        if (age >= 16 and h >= 20) or h >= 40:
+            return "senior"
+        return "mid-career"
+
+    # No year data: fall back to a productivity-only heuristic, but less eager to
+    # call someone senior than the original thresholds were.
+    if h >= 30 or wc >= 120:
         return "senior"
     if h <= 10 and wc <= 30:
         return "early-career"
