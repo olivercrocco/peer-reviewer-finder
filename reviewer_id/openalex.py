@@ -35,7 +35,18 @@ class OpenAlex:
         self.session.headers.update({"User-Agent": ua})
 
     def get(self, path, params=None):
-        """GET an OpenAlex endpoint with retry/backoff on 429 and transient errors."""
+        """GET an OpenAlex endpoint, retrying only *transient* failures.
+
+        Retries with backoff on HTTP 429, HTTP 5xx, and connection/timeout
+        errors. Permanent client errors (4xx other than 429, e.g. 400/404) raise
+        immediately without wasting retries.
+
+        Fails loudly on exhaustion: if the request is still rate-limited after
+        `self.tries` attempts this raises ``RuntimeError`` instead of returning
+        an empty result. A throttled run would otherwise yield a smaller-but-
+        confident-looking candidate pool, and the editor would get an incomplete
+        reviewer shortlist with no indication anything was dropped.
+        """
         params = dict(params or {})
         if self.email:
             params["mailto"] = self.email
@@ -48,19 +59,41 @@ class OpenAlex:
         else:
             url = f"{BASE}/{path.lstrip('/')}"
         for attempt in range(self.tries):
+            last = attempt == self.tries - 1
             try:
                 r = self.session.get(url, params=params, timeout=self.timeout)
-                if r.status_code == 200:
-                    return r.json()
-                if r.status_code == 429:
-                    time.sleep(2 * (attempt + 1))
-                    continue
-                r.raise_for_status()
             except requests.RequestException:
-                if attempt == self.tries - 1:
+                # connection reset / timeout / DNS — transient, retry
+                if last:
                     raise
                 time.sleep(1.5 * (attempt + 1))
-        return {}
+                continue
+
+            if r.status_code == 200:
+                return r.json()
+            if r.status_code == 429:
+                # rate-limited — transient, back off and retry
+                if last:
+                    raise RuntimeError(
+                        "OpenAlex rate-limited: candidate pool is incomplete; "
+                        "rerun later"
+                    )
+                time.sleep(2 * (attempt + 1))
+                continue
+            if r.status_code >= 500:
+                # server-side error — transient, back off and retry
+                if last:
+                    r.raise_for_status()
+                time.sleep(1.5 * (attempt + 1))
+                continue
+            # permanent client error (4xx other than 429) — do not retry
+            r.raise_for_status()
+
+        # Defensive: every branch above returns or raises on the final attempt,
+        # so this is never reached. Never silently return an incomplete result.
+        raise RuntimeError(
+            "OpenAlex request did not complete; candidate pool is incomplete"
+        )
 
     # -- resolvers -------------------------------------------------------------
     def resolve_source(self, issns=None, name=None):

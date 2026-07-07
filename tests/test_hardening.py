@@ -10,6 +10,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
+import requests
+
+from reviewer_id import openalex
 from reviewer_id.report import _safe_slug
 from reviewer_id.openalex import OpenAlex, _valid_issn
 from reviewer_id.orcid import ORCID
@@ -93,6 +96,84 @@ def test_career_stage_uses_academic_age():
                                             {"year": 2022, "works_count": 3}]},
                         current_year=2026) == 4
     assert academic_age({}, current_year=2026) is None
+
+# ---- Rate-limit hardening: get() fails loudly and retries only transient errors ----
+class _Resp:
+    def __init__(self, status, payload=None):
+        self.status_code = status
+        self._payload = payload if payload is not None else {}
+
+    def json(self):
+        return self._payload
+
+    def raise_for_status(self):
+        if self.status_code >= 400:
+            raise requests.HTTPError(f"HTTP {self.status_code}")
+
+
+class _Session:
+    """Stand-in for requests.Session that replays a scripted list of responses
+    (or raises a queued exception) and counts how many GETs it served."""
+
+    def __init__(self, scripted):
+        self._scripted = list(scripted)
+        self.calls = 0
+        self.headers = {}
+
+    def get(self, url, params=None, timeout=None):
+        self.calls += 1
+        item = self._scripted.pop(0)
+        if isinstance(item, Exception):
+            raise item
+        return item
+
+
+def _no_sleep():
+    """Patch openalex.time.sleep to a no-op; returns a restore callable."""
+    orig = openalex.time.sleep
+    openalex.time.sleep = lambda *a, **k: None
+    return lambda: setattr(openalex.time, "sleep", orig)
+
+
+def test_get_raises_loudly_on_rate_limit_exhaustion():
+    restore = _no_sleep()
+    try:
+        client = OpenAlex(email="", tries=3)
+        client.session = _Session([_Resp(429), _Resp(429), _Resp(429)])
+        raised = None
+        try:
+            client.get("works", {"search": "x"})
+        except RuntimeError as e:
+            raised = e
+        assert raised is not None, "get() must raise, not silently return {}, when rate-limited out"
+        assert "rate-limited" in str(raised).lower()
+        assert client.session.calls == 3, "should retry up to `tries` times before failing"
+    finally:
+        restore()
+
+
+def test_get_does_not_retry_permanent_4xx():
+    client = OpenAlex(email="", tries=4)
+    client.session = _Session([_Resp(404), _Resp(200, {"ok": True})])
+    raised = False
+    try:
+        client.get("sources/issn:0000-0000")
+    except requests.HTTPError:
+        raised = True
+    assert raised, "a permanent 4xx must raise immediately"
+    assert client.session.calls == 1, "a permanent 4xx must NOT be retried"
+
+
+def test_get_retries_transient_5xx_then_succeeds():
+    restore = _no_sleep()
+    try:
+        client = OpenAlex(email="", tries=4)
+        client.session = _Session([_Resp(500), _Resp(200, {"results": [1, 2]})])
+        data = client.get("works", {"search": "x"})
+        assert data == {"results": [1, 2]}
+        assert client.session.calls == 2, "a 5xx should be retried, then succeed"
+    finally:
+        restore()
 
 
 # ---- F5: find_submission tolerates partial OpenAlex responses ----
