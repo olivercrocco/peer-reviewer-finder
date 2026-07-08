@@ -206,6 +206,24 @@ def _write_panel(path, result):
     md.append("\n## Conflicts & independence\n")
     _coi_block(result, md)
     md.append("\n## Notes\n")
+    awy = result.get("active_within_years")
+    mra = result.get("max_related_paper_age")
+    reqs_txt = []
+    if mra:
+        reqs_txt.append(f"a matching paper within the last {mra} years")
+    if awy:
+        reqs_txt.append(f"a publication within the last {awy} years")
+    if reqs_txt:
+        removed = []
+        if result.get("related_age_blocked"):
+            removed.append(f"{result['related_age_blocked']} whose on-topic work was all older")
+        if result.get("stale_pub_blocked"):
+            removed.append(f"{result['stale_pub_blocked']} with no recent publications")
+        note = ("- **Freshness filters applied:** every candidate has "
+                + " and ".join(reqs_txt) + ".")
+        if removed:
+            note += " Removed " + " and ".join(removed) + " before ranking."
+        md.append(note)
     if result.get("contacts_enabled"):
         md.append("- **Emails** shown are the reviewer's own *public* ORCID email; most "
                   "researchers keep it private, so blanks are expected. For those, use the "

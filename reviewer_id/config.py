@@ -40,6 +40,23 @@ PANEL_DEFAULTS = {
     "max_senior": 3,            # cap seniors so they can't crowd out the panel
 }
 
+# Reviewer freshness filters, applied during scoring to maximize the chance an
+# invited reviewer is both a genuine fit and likely to accept. Tune or disable them
+# per-manuscript in the spec ("active_within_years", "max_related_paper_age") or from
+# the CLI (--active-within-years, --max-related-age). Set either to 0 to disable it.
+#
+#   active_within_years    Drop a candidate with no recorded publication in the last
+#                          N years: no output for 3+ years reads as inactive, retired,
+#                          or moved on, and a low-odds invite. Default 3.
+#   max_related_paper_age  Drop a candidate whose most recent MATCHING paper is older
+#                          than this many years. A reviewer whose on-topic work is all
+#                          15+ years old is a weak fit for what you're sending now.
+#                          Default 15.
+FILTER_DEFAULTS = {
+    "active_within_years": 3,
+    "max_related_paper_age": 15,
+}
+
 # Used only if journals.yaml is missing, so the package is runnable out of the box.
 FALLBACK_REGISTRY = [
     {"openalex_id": "S191693275", "name": "Human Resource Development Quarterly",

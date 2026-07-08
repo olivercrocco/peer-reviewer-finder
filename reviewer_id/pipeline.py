@@ -3,8 +3,9 @@
 import time
 
 from . import coi, ledger, search
-from .config import select_sources
-from .score import classify, prelim_value, score
+from .config import FILTER_DEFAULTS, select_sources
+from .score import (classify, is_related_paper_too_old, is_stale_activity,
+                    prelim_value, score)
 
 TIERS = ("core", "secondary", "method_primary", "method_generic", "context")
 
@@ -63,7 +64,14 @@ def _fold(matches, term, bucket, id_meta, candidates):
 def run(spec, client, registry, *, top=25, panel_size=None, per_query=100,
         enrich_top=150, current_year=2026, confidential=True,
         ledger_path=None, ledger_cooldown=12, ledger_as_of=None,
-        contacts=False, log=print):
+        contacts=False, active_within_years=None, max_related_paper_age=None,
+        log=print):
+    # Freshness thresholds: None => use the built-in default; 0 => filter disabled.
+    if active_within_years is None:
+        active_within_years = FILTER_DEFAULTS["active_within_years"]
+    if max_related_paper_age is None:
+        max_related_paper_age = FILTER_DEFAULTS["max_related_paper_age"]
+
     # 1. terms by tier
     query_bucket = {}
     for tier in TIERS:
@@ -147,6 +155,7 @@ def run(spec, client, registry, *, top=25, panel_size=None, per_query=100,
     # 6. score + filter
     rows = []
     same_inst_blocked = ledger_blocked = 0
+    stale_pub_blocked = related_age_blocked = 0
     for c in ranked_pre[:enrich_top]:
         if c.id in excl_ids or c.name.lower() in excl_names:
             continue
@@ -157,11 +166,29 @@ def run(spec, client, registry, *, top=25, panel_size=None, per_query=100,
         if (sc["core_breadth"] + sc["secondary_breadth"]
                 + sc["method_primary_breadth"] + sc["method_generic_breadth"]) == 0:
             continue
+        # Freshness gates (see config.FILTER_DEFAULTS). Drop a candidate whose most
+        # recent MATCHING paper is too old to signal current expertise, or who shows
+        # no publication at all in the last few years (likely nonresponsive/departed).
+        if is_related_paper_too_old(sc["recency"], current_year, max_related_paper_age):
+            related_age_blocked += 1
+            continue
+        if is_stale_activity(c.prof, current_year, active_within_years):
+            stale_pub_blocked += 1
+            continue
         if coi.same_institution(c, author_inst_ids, author_tokens):
             same_inst_blocked += 1
             continue
         rows.append((c, sc, classify(sc)))
     rows.sort(key=lambda r: r[1]["score"], reverse=True)
+    if related_age_blocked or stale_pub_blocked:
+        bits = []
+        if related_age_blocked:
+            bits.append(f"{related_age_blocked} whose newest on-topic paper was "
+                        f">{max_related_paper_age} yrs old")
+        if stale_pub_blocked:
+            bits.append(f"{stale_pub_blocked} with no publication in the last "
+                        f"{active_within_years} yrs")
+        log("Freshness filters removed " + "; ".join(bits) + ".")
     if author_inst_ids or author_tokens:
         log(f"Same-institution COI removed {same_inst_blocked} candidate(s).")
     if ledger_blocked:
@@ -207,5 +234,9 @@ def run(spec, client, registry, *, top=25, panel_size=None, per_query=100,
         "n_candidates": len(candidates), "n_journals": len(source_ids),
         "same_inst_blocked": same_inst_blocked,
         "ledger_blocked": ledger_blocked,
+        "stale_pub_blocked": stale_pub_blocked,
+        "related_age_blocked": related_age_blocked,
+        "active_within_years": active_within_years,
+        "max_related_paper_age": max_related_paper_age,
         "ledger_path": str(ledger_path) if ledger_path else None,
     }

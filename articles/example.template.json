@@ -28,6 +28,10 @@
   "reviewer_ledger": null,
   "ledger_cooldown_months": 12,
 
+  "_comment_filters": "Freshness filters (defaults shown; set either to 0 to disable, or override per-run with CLI --active-within-years / --max-related-age). active_within_years: drop a candidate with no publication in the last N years (inactive / likely nonresponsive). max_related_paper_age: drop a candidate whose most recent MATCHING paper is older than N years (stale on-topic expertise).",
+  "active_within_years": 3,
+  "max_related_paper_age": 15,
+
   "_comment_panel": "Optional scorecard the suggested panel tries to satisfy (defaults shown). Boxes the pool can't fill are reported, not silently dropped. Override any subset.",
   "panel": {
     "size": 9,

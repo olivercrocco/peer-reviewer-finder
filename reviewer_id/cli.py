@@ -49,6 +49,13 @@ def main(argv=None):
                          "Opt-in: sends only the reviewers' public ORCID iDs to pub.orcid.org, "
                          "never manuscript text or author identities. A paste-ready "
                          "<slug>_contacts.csv (with search links for any gaps) is written either way.")
+    ap.add_argument("--active-within-years", type=int, default=None, metavar="N",
+                    help="Drop candidates with no publication in the last N years "
+                         "(default 3; 0 disables). Overrides the spec's active_within_years.")
+    ap.add_argument("--max-related-age", type=int, default=None, metavar="N",
+                    help="Drop candidates whose most recent matching paper is older than "
+                         "N years (default 15; 0 disables). Overrides the spec's "
+                         "max_related_paper_age.")
     ap.add_argument("--list-disciplines", action="store_true", help="Print the registry's disciplines and exit.")
     args = ap.parse_args(argv)
 
@@ -89,12 +96,20 @@ def main(argv=None):
     # contact lookup: CLI flag > spec field > default (off)
     contacts = args.contacts if args.contacts is not None else bool(spec.get("contacts", False))
 
+    # freshness filters: CLI flag > spec field > built-in default (filled in run()).
+    # None => not specified (use default); an explicit 0 disables that filter.
+    active_within = (args.active_within_years if args.active_within_years is not None
+                     else spec.get("active_within_years"))
+    max_related_age = (args.max_related_age if args.max_related_age is not None
+                       else spec.get("max_related_paper_age"))
+
     # confidential mode sends no mailto (email="" suppresses it); otherwise use --email/env
     client = OpenAlex(email="" if confidential else args.email)
     result = run(spec, client, registry, top=args.top, panel_size=args.panel,
                  per_query=args.per_query, enrich_top=args.enrich_top,
                  current_year=args.current_year, confidential=confidential,
-                 ledger_path=ledger_path, ledger_cooldown=cooldown, contacts=contacts)
+                 ledger_path=ledger_path, ledger_cooldown=cooldown, contacts=contacts,
+                 active_within_years=active_within, max_related_paper_age=max_related_age)
 
     slug = spec.get("slug") or Path(args.article).stem
     paths = write_all(result, args.out, slug)

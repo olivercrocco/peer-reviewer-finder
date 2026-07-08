@@ -75,8 +75,9 @@ Outputs land in `output/<slug>_*`:
 | `<slug>_raw.json` | matched works + per-term match strength (audit trail) |
 
 Useful flags: `--disciplines "Human Resource Development,Higher Education"` to
-narrow the pool, `--panel 5`, `--top 30`, `--contacts` (look up panel emails, see
-below), `--list-disciplines`.
+narrow the pool, `--panel 5`, `--top 30`, `--active-within-years 3` /
+`--max-related-age 15` (freshness filters; `0` disables either), `--contacts`
+(look up panel emails, see below), `--list-disciplines`.
 
 ## The article spec
 
@@ -132,6 +133,26 @@ shown alongside it as a cross-check. Tune the targets in the spec's `panel` bloc
 
 The proposed set defaults to **9 reviewers, ranked by best fit** — a deeper bench,
 since invitation response rates are low and some candidates may be over-tapped.
+
+### Freshness filters
+
+To keep the shortlist to reviewers who are both a good fit and likely to accept, two
+filters run during scoring. Both are tunable in the spec or from the CLI; set either
+to `0` to disable it.
+
+- **`active_within_years`** (default 3): drop a candidate with no publication in the
+  last N years. A multi-year gap in the OpenAlex record usually means the person is
+  inactive, retired, or has moved on, which makes for a low-odds invitation.
+- **`max_related_paper_age`** (default 15): drop a candidate whose most recent
+  *matching* paper is older than N years. Someone whose on-topic work is all 15+ years
+  old is a weak match for what you are sending now.
+
+```bash
+python -m reviewer_id --article articles/my_submission.json \
+    --active-within-years 3 --max-related-age 15   # these are the defaults; 0 disables
+```
+
+The panel report notes how many candidates each filter removed.
 
 ### Reviewer over-use ledger
 

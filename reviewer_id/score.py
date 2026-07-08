@@ -122,6 +122,17 @@ def academic_age(prof, current_year=2026):
     return max(0, current_year - min(years)) if years else None
 
 
+def last_publication_year(prof):
+    """The most recent year the author has any recorded output, from OpenAlex
+    `counts_by_year`. Returns None when there's no year data, so callers can choose
+    to keep (not silently drop) a candidate whose profile is thin rather than guess.
+    Basis for the 'still active' reviewer filter."""
+    cby = (prof or {}).get("counts_by_year") or []
+    years = [c.get("year") for c in cby
+             if c.get("year") and (c.get("works_count") or 0) > 0]
+    return max(years) if years else None
+
+
 def career_stage(prof, current_year=2026):
     """Career-stage proxy. PRIMARY axis is academic age (years since first
     publication); h-index only refines the edges. Career stage means time in the
@@ -164,6 +175,28 @@ def recent_works(prof, current_year=2026, window=3):
 def is_active(prof, current_year=2026, window=3):
     """Has the candidate published recently? A weak responsiveness/"not retired" signal."""
     return recent_works(prof, current_year, window) > 0
+
+
+def is_stale_activity(prof, current_year=2026, max_gap=3):
+    """True when we can positively tell the author has not published in >= max_gap
+    years (max_gap=3 drops anyone whose last recorded output is 3+ years back). A
+    likely-nonresponsive, retired, or departed reviewer. max_gap of 0/None disables
+    the check; a candidate with no year data is NOT called stale (we don't guess)."""
+    if not max_gap:
+        return False
+    lpy = last_publication_year(prof)
+    return lpy is not None and (current_year - lpy) >= max_gap
+
+
+def is_related_paper_too_old(recency, current_year=2026, max_age=15):
+    """True when the author's most recent MATCHING paper is more than max_age years
+    old (recency = the newest on-topic publication year from scoring). Expertise a
+    reviewer last exercised 15+ years ago is a weak reason to invite them today.
+    max_age of 0/None disables the check; recency of None (a matched work with no
+    year) is NOT called too old."""
+    if not max_age:
+        return False
+    return recency is not None and (current_year - recency) > max_age
 
 
 def is_method_expert(sc):
